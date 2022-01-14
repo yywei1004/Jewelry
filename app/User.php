@@ -36,4 +36,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //使用者有很多購物車
+    public function shoppingcart(){
+        return $this->hasOne(ShoppingCart::class, 'user_id', 'id');
+    }
+
+    //使用者有很多訂單
+    public function order(){
+        return $this->hasMany(Order::class,'user_id','id');
+    }
 }
