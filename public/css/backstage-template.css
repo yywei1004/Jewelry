@@ -1,0 +1,49 @@
+:root{
+    --decoration-color-darkgold:#AD7D47;
+    --decoration-color-gold:#c99833; 
+    
+}
+
+nav {
+    width: 100%;
+    height: 145px;
+    background-color: #FFF4EF;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 40px;
+    letter-spacing: 0.09em;
+    color: var(--decoration-color-darkgold);
+}
+
+.list > a {
+    margin: 20px 20px;
+    text-decoration: none;
+    color: var(--decoration-color-darkgold);
+    opacity: 79%;
+    z-index: 1;
+}
+
+.list > a:hover{
+    border-bottom: solid 2px;
+}
+
+.checked {
+    border-bottom: solid 2px;
+}
+
+nav>img {
+    width: 167px;
+    height: 112px;
+    background-image: url();
+    background-size: cover;
+}
+
+.user {
+    position: absolute;
+    text-align: end;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    font-size: 30px;
+    font-weight: 400;
+}

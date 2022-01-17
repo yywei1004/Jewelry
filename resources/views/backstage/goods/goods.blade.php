@@ -27,4 +27,10 @@
        
     </div>
 @endsection
+@section('js')
+    <script>
+        var checked = document.querySelector('#product');
+        checked.classList.add('checked');
+    </script>
+@endsection
  

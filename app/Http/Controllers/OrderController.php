@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    //以下待處理
     public function index(){
         $order = Order::get();
         return view('backstage.order.order',compact('order'));
@@ -19,11 +18,9 @@ class OrderController extends Controller
     }
 
     public function update($id, Request $request){
-
         $order = Order::find($id);
         $order->status = $request->status;
         $order->save();
-
         return redirect('/order');
     }
 }

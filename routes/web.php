@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/index','FrontController@index');
+Route::post('/addtocart', 'FrontController@addtocart');
 
 //需登入
 Route::middleware('userlevel')->group(function(){
@@ -27,7 +28,6 @@ Route::middleware('userlevel')->group(function(){
     Route::post('/shopping03', 'FrontController@shopping_03');
     Route::post('/store', 'FrontController@store');
     Route::get('/shopping04/{id}', 'FrontController@shopping_04');
-    Route::post('/addtocart', 'FrontController@addtocart');
     Route::post('/deletetocart', 'FrontController@deletetocart');
     Route::get('/trade/{id}', 'FrontController@trade');
 });

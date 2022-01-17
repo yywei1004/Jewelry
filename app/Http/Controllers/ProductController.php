@@ -22,19 +22,6 @@ class ProductController extends Controller
     }
 
     public function store(Request $request){
-        //儲存表單的資料
-        // 可以先用 dd($request->all());  去檢查有沒有成功將檔案送上後端
-        // 原生laravel的檔案上傳，必須輸入 php artisan storage:link 並修改回傳路徑才能使用
-        // $path = Storage::disk('local')->put('public/goods', $request->images);
-        // Storage::  =>  laravel 提供的儲存檔案的功能
-        // disk('local') => 儲存的位置(可在config/filesystems定義)
-        // put('public/goods', $request->images) => 放檔案的function
-        // 第一個參數是資料夾名稱 (須從public/開始), 第二個參數是檔案本身
-
-        // 自製檔案上傳 第一個參數 檔案,  第二個參數 資料夾
-        // $path = FilesController::imgUpload($request->images,'goods');
-
-
         $product = Product::create([
             'name' => $request->name,
             'desc' => $request->desc,
