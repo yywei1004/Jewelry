@@ -1,13 +1,13 @@
 @extends('layouts.backstage-template')
 @section('css')
-    <link rel="stylesheet" href=" {{asset('css/goods.css')}}">
+    <link rel="stylesheet" href=" {{ asset('css/goods.css') }}">
 @endsection
    
 @section('main')
     <div class="container">
         <h1>商品清單</h1>
         <a href="/product/create">新增商品</a>
-        @foreach ($cookie as $product)
+        @foreach ($product as $product)
         <div class="product">
             <div class="img" style="background-image: url('{{$product->imgs[0]->image_path}}')"></div>
             <div class="text">

@@ -26,7 +26,7 @@
             <a href="/order" id="order">訂單管理</a>
             <a href="/user" id="user">會員管理</a>
             <img src="{{ asset('img/LOGO.webp') }}" alt="">
-            <a href="/product" id="product">頁面管理</a>
+            <a href="/news" id="news">頁面管理</a>
             <a href="/feedback" id="feedback">意見回饋</a>
         </div>
         <div class="user">

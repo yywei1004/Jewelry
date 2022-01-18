@@ -11,14 +11,13 @@ class ProductController extends Controller
     //以下待處理
     public function index(){
 
-        $cookie = Product::get();
+        $product = Product::get();
 
-        return view('backstage.goods.goods',compact('cookie'));
+        return view('backstage.products.goods',compact('product'));
     }
 
     public function create(){
-
-        return view('backstage.goods.goods-create');
+        return view('backstage.products.goods-create');
     }
 
     public function store(Request $request){
@@ -41,7 +40,7 @@ class ProductController extends Controller
 
     public function edit($id){
         $product = Product::find($id);
-        return view('backstage.goods.goods-edit',compact('product'));
+        return view('backstage.products.goods-edit',compact('product'));
     }
 
     public function update($id, Request $request){
@@ -86,7 +85,6 @@ class ProductController extends Controller
 
 
     public function imgUpload(Request $request){
-        
         $path = '[';
         foreach ($request->img as $value) {
             $path = $path.'"'.FilesController::imgUpload($value,'goods').'",';

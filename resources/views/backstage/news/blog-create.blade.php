@@ -7,7 +7,7 @@
 
 @section('main')
     <div class="container">
-        <form action="/news/store" method="post" enctype="multipart/form-data">
+        <form action="/news/newsstore" method="post" enctype="multipart/form-data">
             @csrf
             {{-- 上面這行 等同於 <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
             <div class="row">

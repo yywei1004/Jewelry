@@ -46,11 +46,22 @@ Route::middleware('userlevel')->group(function(){
     //最新消息
     Route::prefix('/news')->group(function(){
         Route::get('/', 'NewsController@index');
-        Route::get('/create', 'NewsController@create');
-        Route::POST('/store', 'NewsController@store');
-        Route::get('/edit/{id}', 'NewsController@edit');
-        Route::POST('/update/{id}', 'NewsController@update');
-        Route::get('/delete/{id}', 'NewsController@delete');
+        //封面編輯
+        Route::post('coveredit','NewsController@coveredit');
+        //最新消息
+        Route::get('/newscreate', 'NewsController@newscreate');
+        Route::POST('/newsstore', 'NewsController@newsstore');
+        Route::get('/newsedit/{id}', 'NewsController@newsedit');
+        Route::POST('/newsupdate/{id}', 'NewsController@newsupdate');
+        Route::get('/newsdelete/{id}', 'NewsController@newsdelete');
+        //系列主題
+        Route::get('/themecreate', 'NewsController@themecreate');
+        Route::POST('/themestore', 'NewsController@themestore');
+        Route::get('/themeedit/{id}', 'NewsController@themeedit');
+        Route::POST('/themeupdate/{id}', 'NewsController@themeupdate');
+        Route::get('/themedelete/{id}', 'NewsController@themedelete');
+        Route::post('/imgupload', 'NewsController@imgUpload');
+        Route::post('/imgDelete', 'ProductController@imgDelete');
     });
 
     //產品

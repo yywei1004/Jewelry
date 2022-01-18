@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  border: solid 1px gray;
+  border-radius: 6px;
+  padding: 0;
+}
+
+.container .tab-list {
+  width: 100%;
+  height: 113px;
+  margin-left: 0;
+}
+
+.container .tab-list .promotion-tab {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: gray;
+}
+
+.container .tab-list .product-tab {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: gray;
+  background-color: #f0f0f0;
+  border-left: solid 1px gray;
+  border-bottom: solid 1px gray;
+}
+
+.container .promotion-content {
+  /* height: 640px; */
+}
+
+.container .promotion-content .cover {
+  width: 90%;
+  border: solid 1px gray;
+  border-radius: 6px;
+  color: gray;
+}
+
+.container .promotion-content .cover h4 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.container .promotion-content .cover .cover-img {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .promotion-content .cover .cover-img img {
+  width: 100%;
+  background-size: cover;
+}
+
+.container .promotion-content .cover .cover-img label {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: gray;
+  font-size: 24px;
+}
+
+.container .promotion-content .news {
+  width: 90%;
+  border: solid 1px gray;
+  border-radius: 6px;
+  color: gray;
+}
+
+.container .promotion-content .news h4 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.container .promotion-content .theme {
+  border: solid 1px gray;
+  border-radius: 6px;
+  color: gray;
+}
+
+.container .promotion-content .theme h4 {
+  font-weight: 700;
+  margin: 0;
+}
