@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Newz;
 use App\Cover;
+use App\Feedback;
 use App\Product;
 use App\ProductImg;
 use Illuminate\Http\Request;
@@ -17,16 +18,7 @@ class NewsController extends Controller
         $theme = Product::where('type','theme')->orderbydesc('id')->take(6)->get();
         return view('backstage.news.promotion', compact('cover','news','theme'));
     }
-    //修改封面
-    public function coveredit(Request $request){
-        // Cover::where('cover_path', $request->path)->delete();
-        
-        $cover = Cover::orderbydesc('id')->take(1)->get();
-        $cover->cover_path = 
-
-        FilesController::deleteUpload($request->path);
-        return redirect('/news');
-    }
+    
     //最新消息
     public function newscreate(){
         return view('backstage.news.blog-create');
@@ -116,7 +108,6 @@ class NewsController extends Controller
         return redirect('/news');
     }
 
-
     public function imgUpload(Request $request){
         $cover = Cover::find(1);
         FilesController::deleteUpload($cover->cover_path);
@@ -126,5 +117,16 @@ class NewsController extends Controller
         $cover->cover_path = $path;
         $cover->save();
         return $path;
+    }
+
+    //意見回饋
+    public function feedback(){
+        $feedback = Feedback::get();
+        return view('backstage.feedback.feedback',compact('feedback'));
+    }
+
+    public function feedbackdelete($id){
+        Feedback::find($id)->delete();
+        return redirect('/feedback');
     }
 }

@@ -3,41 +3,28 @@
 @section('main')
     <br>
     <div class="container">
-        <table id="order_table" class="display">
+        <table id="feedback_table" class="display">
             <thead>
                 <tr>
-                    <th></th>
-                    <th>購買人</th>
-                    {{-- <th>地址</th>
-                    <th>電話</th> --}}
-                    <th>總價</th>
-                    <th>狀態</th>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>電話</th>
+                    <th>電子郵件</th>
+                    <th>意見</th>
                     <th>操作</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($order as $item)
+                @foreach ($feedback as $item)
                     <tr>
-                        <td>{{ $item->order_number }}</td>
-                        <td>{{ $item->user->name }}</td>
-                        {{-- <td>{{ $item->address }}</td>
-                        <td>{{ $item->phone }}</td> --}}
-                        <td>{{ $item->total_price }}</td>
+                        <td>{{ $item->id }}</td>
+                        <td>{{ $item->name }}</td>
+                        <td>{{ $item->phone }}</td>
+                        <td>{{ $item->email }}</td>
+                        <td>{{ $item->desc }}</td>
                         <td>
-                            @if ($item->status == 1)
-                                未付款
-                            @elseif ($item->status == 2)
-                                已付款
-                            @elseif ($item->status == 3)
-                                已出貨
-                            @elseif ($item->status == 4)
-                                已取消
-                            @endif
-                        </td>
-                        <td>
-                            <a href="/order/look/{{ $item->id }}" title="查看訂單詳情" style="color:gray"><i class="fas fa-list-alt"></i></a>
-                            <a href="" title="修改訂單" style="color:gray"><i class="fas fa-edit"></i></a>
-                            <a href="" title="刪除訂單" style="color:gray"><i class="fas fa-trash-alt"></i></a>
+                            <a href="/feedback/delete/{{ $item->id }}" onclick="return check()" title="刪除意見"
+                                style="color:gray"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 @endforeach
@@ -49,9 +36,17 @@
 @section('js')
     <script>
         $(document).ready(function() {
-            $('#order_table').DataTable();
+            $('#feedback_table').DataTable();
         });
-        var checked = document.querySelector('#order');
+        var checked = document.querySelector('#feedback');
         checked.classList.add('checked');
+
+        function check() {
+            var check = confirm('確定刪除?');
+            if (check){
+                return true;
+            }
+            return false;
+        }
     </script>
 @endsection

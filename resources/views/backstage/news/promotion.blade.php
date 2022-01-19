@@ -1,6 +1,13 @@
 @extends('layouts.backstage-template')
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/promotion.css') }}">
+    <style>
+        .container .tab-list .product-tab {
+            background-color: #f0f0f0;
+            border-left: solid 1px gray;
+            border-bottom: solid 1px gray;
+        }
+    </style>
 @endsection
 
 @section('main')
@@ -8,10 +15,10 @@
     <div class="container">
         <div class="row tab-list">
             <div class="promotion-tab">
-                <h3>行銷訊息</h3>
+                <h3 class="mb-0">行銷訊息</h3>
             </div>
             <div class="product-tab">
-                <h3>商品專區</h3>
+                <a href="/product">商品專區</a>
             </div>
         </div>
         <div class="promotion-content row">
@@ -22,7 +29,7 @@
                         <h6 class="mx-3 my-0">圖片尺寸: 1920x825px</h6>
                     </div>
                     <div class="cover-img">
-                        <img id="img-change" src="{{$cover[0]->cover_path}}" alt="">
+                        <img id="img-change" src="{{ $cover[0]->cover_path }}" alt="">
                         <label for="images" title="修改封面" style="cursor: pointer"><i class="fas fa-edit"></i></label>
                         <input type="file" id="images" onchange="imgupload()" hidden>
                     </div>
@@ -43,12 +50,12 @@
                             <div class="row d-flex border-top py-2">
                                 <span class="col-2">{{ $item->id }}</span>
                                 <span class="col-3">{{ substr($item->created_at, 0, 10) }}</span>
-                                <span class="col-5">{{ $item->title }}</span>
+                                <span class="col-5 text-primary">{{ $item->title }}</span>
                                 <div class="col-2">
-                                    <a href="/news/newsedit/{{$item->id}}" title="修改消息" style="color:gray"><i
+                                    <a href="/news/newsedit/{{ $item->id }}" title="修改消息" style="color:gray"><i
                                             class="fas fa-edit"></i></a>
-                                    <a href="/news/newsdelete/{{$item->id}}" title="刪除消息" style="color:gray"><i
-                                            class="fas fa-trash-alt"></i></a>
+                                    <a href="/news/newsdelete/{{ $item->id }}" title="刪除消息" style="color:gray"
+                                        onclick="return check()"><i class="fas fa-trash-alt"></i></a>
                                 </div>
                             </div>
                         @endforeach
@@ -71,11 +78,15 @@
                         @foreach ($theme as $item)
                             <div class="row d-flex border-top py-2">
                                 <span class="col-3">{{ substr($item->created_at, 0, 10) }}</span>
-                                <div class="col-4 img" style="background-image: url('{{@$item->imgs[0]->image_path}}');background-size: cover;height: 60px;"></div>
-                                <span class="col-3">{{ $item->name }}</span>
+                                <div class="col-4 img"
+                                    style="background-image: url('{{ @$item->imgs[0]->image_path }}');background-size: cover;height: 60px;">
+                                </div>
+                                <span class="col-3 text-primary">{{ $item->name }}</span>
                                 <div class="col-2">
-                                    <a href="/news/themeedit/{{$item->id}}" title="修改主題" style="color:gray"><i class="fas fa-edit"></i></a>
-                                    <a href="/news/themedelete/{{$item->id}}" title="刪除主題" style="color:gray"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="/news/themeedit/{{ $item->id }}" title="修改主題" style="color:gray"><i
+                                            class="fas fa-edit"></i></a>
+                                    <a href="/news/themedelete/{{ $item->id }}" title="刪除主題" style="color:gray"
+                                        onclick="return check()"><i class="fas fa-trash-alt"></i></a>
                                 </div>
                             </div>
                         @endforeach
@@ -90,33 +101,40 @@
     <script>
         var checked = document.querySelector('#news');
         checked.classList.add('checked');
+
+        function check() {
+            var check = confirm('確定刪除?');
+            if (check) {
+                return true;
+            }
+            return false;
+        }
     </script>
     <script>
         var input = document.querySelector('#images');
         var uploaded = document.querySelector('#img-change');
-        
-        function imgupload(){
+
+        function imgupload() {
             var formdata = new FormData()
-            formdata.append('_token', ' {{csrf_token()}}')
+            formdata.append('_token', ' {{ csrf_token() }}')
             for (let index = 0; index < input.files.length; index++) {
                 console.log(input.files[index]);
                 formdata.append('img[]', input.files[index])
             }
 
             fetch('/news/imgupload', {
-                method: 'POST',
-                body: formdata
-            })
-            .then(response => response.json())
-            .then(response => {
-                console.log('Success:', response[0])
-                response.forEach(element => {
-                    uploaded.innerHTML += `
+                    method: 'POST',
+                    body: formdata
+                })
+                .then(response => response.json())
+                .then(response => {
+                    console.log('Success:', response[0])
+                    response.forEach(element => {
+                        uploaded.innerHTML += `
                     <img id="img-change" src="${element}" alt="">
                     `
+                    });
                 });
-            });
-            // window.location.reload()
             window.location.reload()
         }
     </script>

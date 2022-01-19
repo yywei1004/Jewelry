@@ -23,5 +23,6 @@ class UserLevel
             }
             return redirect('/index');
         }
+        return redirect('/login');
     }
 }
