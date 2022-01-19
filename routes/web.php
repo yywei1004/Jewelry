@@ -43,9 +43,11 @@ Route::middleware('userlevel')->group(function(){
         Route::post('/update/{id}', 'UserController@update');
     });
 
-    //最新消息
+    //行銷訊息
     Route::prefix('/news')->group(function(){
         Route::get('/', 'NewsController@index');
+        //主頁大圖
+        Route::post('/imguploadcover1', 'NewsController@imgUploadcover1');
         //最新消息
         Route::get('/newscreate', 'NewsController@newscreate');
         Route::POST('/newsstore', 'NewsController@newsstore');
@@ -58,7 +60,7 @@ Route::middleware('userlevel')->group(function(){
         Route::get('/themeedit/{id}', 'NewsController@themeedit');
         Route::POST('/themeupdate/{id}', 'NewsController@themeupdate');
         Route::get('/themedelete/{id}', 'NewsController@themedelete');
-        Route::post('/imgupload', 'NewsController@imgUpload');
+        Route::post('/imgupload', 'ProductController@imgUpload');
         Route::post('/imgDelete', 'ProductController@imgDelete');
     });
 
@@ -66,15 +68,41 @@ Route::middleware('userlevel')->group(function(){
     Route::prefix('/product')->group(function(){
         Route::get('/','ProductController@index');
         //折扣專區
-        Route::get('/discountcreate', 'NewsController@discountcreate');
-        Route::POST('/discountstore', 'NewsController@discountstore');
-        Route::get('/discountedit/{id}', 'NewsController@discountedit');
-        Route::POST('/discountupdate/{id}', 'NewsController@discountupdate');
-        Route::get('/discountdelete/{id}', 'NewsController@discountdelete');
-        Route::post('/imgupload', 'NewsController@imgUpload');
+        Route::get('/discountcreate', 'ProductController@discountcreate');
+        Route::POST('/discountstore', 'ProductController@discountstore');
+        Route::get('/discountedit/{id}', 'ProductController@discountedit');
+        Route::POST('/discountupdate/{id}', 'ProductController@discountupdate');
+        Route::get('/discountdelete/{id}', 'ProductController@discountdelete');
+        Route::post('/imgupload', 'ProductController@imgUpload');
+        Route::post('/imgDelete', 'ProductController@imgDelete');
+        //最新商品
+        Route::post('/imguploadcover2', 'NewsController@imgUploadcover2');
+        Route::get('/latestcreate', 'ProductController@latestcreate');
+        Route::POST('/lateststore', 'ProductController@lateststore');
+        Route::get('/latestedit/{id}', 'ProductController@latestedit');
+        Route::POST('/latestupdate/{id}', 'ProductController@latestupdate');
+        Route::get('/latestdelete/{id}', 'ProductController@latestdelete');
+        Route::post('/imgupload', 'ProductController@imgUpload');
+        Route::post('/imgDelete', 'ProductController@imgDelete');
+        //精選商品
+        Route::get('/selectcreate', 'ProductController@selectcreate');
+        Route::POST('/selectstore', 'ProductController@selectstore');
+        Route::get('/selectedit/{id}', 'ProductController@selectedit');
+        Route::POST('/selectupdate/{id}', 'ProductController@selectupdate');
+        Route::get('/selectdelete/{id}', 'ProductController@selectdelete');
+        Route::post('/imgupload', 'ProductController@imgUpload');
+        Route::post('/imgDelete', 'ProductController@imgDelete');
+        //客製專區
+        Route::post('/imguploadcover3', 'NewsController@imgUploadcover3');
+        Route::get('/customcreate', 'ProductController@customcreate');
+        Route::POST('/customstore', 'ProductController@customstore');
+        Route::get('/customedit/{id}', 'ProductController@customedit');
+        Route::POST('/customupdate/{id}', 'ProductController@customupdate');
+        Route::get('/customdelete/{id}', 'ProductController@customdelete');
+        Route::post('/imgupload', 'ProductController@imgUpload');
         Route::post('/imgDelete', 'ProductController@imgDelete');
 
-
+        
         Route::get('/create', 'ProductController@create');
         Route::post('/store', 'ProductController@store');
         Route::get('/edit/{id}', 'ProductController@edit');

@@ -16,12 +16,12 @@ class NewsController extends Controller
         $cover = Cover::get();
         $news = Newz::orderbydesc('id')->take(4)->get();
         $theme = Product::where('type','theme')->orderbydesc('id')->take(6)->get();
-        return view('backstage.news.promotion', compact('cover','news','theme'));
+        return view('backstage.page.promotion.promotion', compact('cover','news','theme'));
     }
     
     //最新消息
     public function newscreate(){
-        return view('backstage.news.blog-create');
+        return view('backstage.page.promotion.news.news-create');
     }
 
     public function newsstore(Request $request){
@@ -35,7 +35,7 @@ class NewsController extends Controller
 
     public function newsedit($id){
         $news = Newz::find($id);
-        return view('backstage.news.blog-edit', compact('news'));
+        return view('backstage.page.promotion.news.news-edit', compact('news'));
     }
 
     public function newsupdate($id, Request $request){
@@ -53,7 +53,7 @@ class NewsController extends Controller
 
     //系列主題
     public function themecreate(){
-        return view('backstage.news.theme-create');
+        return view('backstage.page.promotion.theme.theme-create');
     }
 
     public function themestore(Request $request){
@@ -76,7 +76,7 @@ class NewsController extends Controller
 
     public function themeedit($id){
         $product = Product::find($id);
-        return view('backstage.news.theme-edit',compact('product'));
+        return view('backstage.page.promotion.theme.theme-edit',compact('product'));
     }
 
     public function themeupdate($id, Request $request){
@@ -108,11 +108,11 @@ class NewsController extends Controller
         return redirect('/news');
     }
 
-    public function imgUpload(Request $request){
+    public function imgUploadcover1(Request $request){
         $cover = Cover::find(1);
         FilesController::deleteUpload($cover->cover_path);
         foreach ($request->img as $value) {
-            $path = FilesController::imgUpload($value,'cover');
+            $path = FilesController::imgUpload($value,'cover'); //將圖片上傳放入cover資料夾並回傳路徑
         }
         $cover->cover_path = $path;
         $cover->save();

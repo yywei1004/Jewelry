@@ -71,7 +71,7 @@
                         <div class="row d-flex border-top py-2">
                             <span class="col-3">公告日期</span>
                             <span class="col-4">預覽圖</span>
-                            <span class="col-3">標題</span>
+                            <span class="col-3">產品名稱</span>
                             <a class="col-2" href="/news/themecreate" title="新增主題" style="color:gray"><i
                                     class="fas fa-plus-square"></i></a>
                         </div>
@@ -122,7 +122,7 @@
                 formdata.append('img[]', input.files[index])
             }
 
-            fetch('/news/imgupload', {
+            fetch('/news/imguploadcover1', {
                     method: 'POST',
                     body: formdata
                 })
