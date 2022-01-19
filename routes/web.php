@@ -46,8 +46,6 @@ Route::middleware('userlevel')->group(function(){
     //最新消息
     Route::prefix('/news')->group(function(){
         Route::get('/', 'NewsController@index');
-        //封面編輯
-        Route::post('coveredit','NewsController@coveredit');
         //最新消息
         Route::get('/newscreate', 'NewsController@newscreate');
         Route::POST('/newsstore', 'NewsController@newsstore');
@@ -81,6 +79,12 @@ Route::middleware('userlevel')->group(function(){
         Route::get('/', 'OrderController@index');
         Route::get('/look/{id}', 'OrderController@look');
         Route::post('/update/{id}', 'OrderController@update');
+    });
+
+    //意見回饋
+    Route::prefix('/feedback')->group(function(){
+        Route::get('/','NewsController@feedback');
+        Route::get('/delete/{id}','NewsController@feedbackdelete');
     });
 });
 Auth::routes();

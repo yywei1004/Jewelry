@@ -26,7 +26,7 @@
                         <td>{{ count($item->order) }}</td>
                         <td>
                             <a href="" title="修改會員" style="color:gray"><i class="fas fa-edit"></i></a>
-                            <a href="" title="刪除會員" style="color:gray"><i class="fas fa-trash-alt"></i></a>
+                            <a href="" title="刪除會員" style="color:gray" onclick="return check()"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 @endforeach
@@ -45,5 +45,13 @@
         });
         var checked = document.querySelector('#user');
         checked.classList.add('checked');
+
+        function check() {
+            var check = confirm('確定刪除?');
+            if (check){
+                return true;
+            }
+            return false;
+        }
     </script>
 @endsection

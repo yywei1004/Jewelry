@@ -37,7 +37,7 @@
                         <td>
                             <a href="/order/look/{{ $item->id }}" title="查看訂單詳情" style="color:gray"><i class="fas fa-list-alt"></i></a>
                             <a href="" title="修改訂單" style="color:gray"><i class="fas fa-edit"></i></a>
-                            <a href="" title="刪除訂單" style="color:gray"><i class="fas fa-trash-alt"></i></a>
+                            <a href="" title="刪除訂單" style="color:gray"><i class="fas fa-trash-alt" onclick="return check()"></i></a>
                         </td>
                     </tr>
                 @endforeach
@@ -53,5 +53,13 @@
         });
         var checked = document.querySelector('#order');
         checked.classList.add('checked');
+
+        function check() {
+            var check = confirm('確定刪除?');
+            if (check){
+                return true;
+            }
+            return false;
+        }
     </script>
 @endsection

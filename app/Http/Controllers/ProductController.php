@@ -13,11 +13,11 @@ class ProductController extends Controller
 
         $product = Product::get();
 
-        return view('backstage.products.goods',compact('product'));
+        return view('backstage.product.product',compact('product'));
     }
 
     public function create(){
-        return view('backstage.products.goods-create');
+        return view('backstage.product.goods-create');
     }
 
     public function store(Request $request){
@@ -40,7 +40,7 @@ class ProductController extends Controller
 
     public function edit($id){
         $product = Product::find($id);
-        return view('backstage.products.goods-edit',compact('product'));
+        return view('backstage.product.goods-edit',compact('product'));
     }
 
     public function update($id, Request $request){

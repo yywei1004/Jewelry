@@ -17,11 +17,17 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: gray;
+}
+
+.container .tab-list .promotion-tab a {
+  font-size: 28px;
+  text-decoration: none;
   color: gray;
 }
 
@@ -31,15 +37,18 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: gray;
-  background-color: #f0f0f0;
-  border-left: solid 1px gray;
-  border-bottom: solid 1px gray;
+}
+
+.container .tab-list .product-tab a {
+  font-size: 28px;
+  text-decoration: none;
+  color: gray;
 }
 
 .container .promotion-content {
