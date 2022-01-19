@@ -30,7 +30,7 @@
                         <!-- 流程字 -->
                         <span class="progress-step-text">確認購物車</span>
                         <!-- 流程條 -->
-                        <div class="progress position-absolute" style="height: 13px;">
+                        <div class="progress position-absolute" style="height: 13px; background-color: #EAE8E8;">
                             <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #FEA8A3;" aria-valuenow="25"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
