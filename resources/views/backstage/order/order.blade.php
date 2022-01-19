@@ -1,5 +1,5 @@
 @extends('layouts.backstage-template')
-
+@section('title','訂單管理')
 @section('main')
     <br>
     <div class="container">

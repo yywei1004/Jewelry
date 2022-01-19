@@ -42,7 +42,7 @@
         
        
         <div class="row btn">
-            <a href="/product">取消</a>
+            <a href="/news">取消</a>
             <button type="submit">編輯商品</button>
         </div>
     </form>

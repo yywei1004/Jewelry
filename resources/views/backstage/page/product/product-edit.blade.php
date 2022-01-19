@@ -6,7 +6,7 @@
 @endsection
 @section('main')
 <div class="container">
-    <form action="/news/themeupdate/{{$product->id}}" enctype="multipart/form-data" method="post">
+    <form action="/product/update/{{$product->id}}" enctype="multipart/form-data" method="post">
         @csrf
         <div class="row">
             <label for="name">商品名稱</label>

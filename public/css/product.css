@@ -108,6 +108,27 @@
   margin: 0;
 }
 
+#img-change2{
+  width: 100%;
+  position: relative;
+}
+
+.latest-list label {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+
+#img-change3{
+  width: 100%;
+}
+
+.custom-list label {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+
 .container .product-content .select {
   border: solid 1px gray;
   border-radius: 6px;

@@ -1,4 +1,5 @@
 @extends('layouts.backstage-template')
+@section('title','行銷訊息')
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/promotion.css') }}">
     <style>

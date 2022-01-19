@@ -70,43 +70,20 @@ Route::middleware('userlevel')->group(function(){
         //折扣專區
         Route::get('/discountcreate', 'ProductController@discountcreate');
         Route::POST('/discountstore', 'ProductController@discountstore');
-        Route::get('/discountedit/{id}', 'ProductController@discountedit');
-        Route::POST('/discountupdate/{id}', 'ProductController@discountupdate');
-        Route::get('/discountdelete/{id}', 'ProductController@discountdelete');
-        Route::post('/imgupload', 'ProductController@imgUpload');
-        Route::post('/imgDelete', 'ProductController@imgDelete');
         //最新商品
-        Route::post('/imguploadcover2', 'NewsController@imgUploadcover2');
+        Route::post('/imguploadcover2', 'ProductController@imgUploadcover2');
         Route::get('/latestcreate', 'ProductController@latestcreate');
         Route::POST('/lateststore', 'ProductController@lateststore');
-        Route::get('/latestedit/{id}', 'ProductController@latestedit');
-        Route::POST('/latestupdate/{id}', 'ProductController@latestupdate');
-        Route::get('/latestdelete/{id}', 'ProductController@latestdelete');
-        Route::post('/imgupload', 'ProductController@imgUpload');
-        Route::post('/imgDelete', 'ProductController@imgDelete');
         //精選商品
         Route::get('/selectcreate', 'ProductController@selectcreate');
         Route::POST('/selectstore', 'ProductController@selectstore');
-        Route::get('/selectedit/{id}', 'ProductController@selectedit');
-        Route::POST('/selectupdate/{id}', 'ProductController@selectupdate');
-        Route::get('/selectdelete/{id}', 'ProductController@selectdelete');
-        Route::post('/imgupload', 'ProductController@imgUpload');
-        Route::post('/imgDelete', 'ProductController@imgDelete');
         //客製專區
-        Route::post('/imguploadcover3', 'NewsController@imgUploadcover3');
+        Route::post('/imguploadcover3', 'ProductController@imgUploadcover3');
         Route::get('/customcreate', 'ProductController@customcreate');
         Route::POST('/customstore', 'ProductController@customstore');
-        Route::get('/customedit/{id}', 'ProductController@customedit');
-        Route::POST('/customupdate/{id}', 'ProductController@customupdate');
-        Route::get('/customdelete/{id}', 'ProductController@customdelete');
-        Route::post('/imgupload', 'ProductController@imgUpload');
-        Route::post('/imgDelete', 'ProductController@imgDelete');
-
-        
-        Route::get('/create', 'ProductController@create');
-        Route::post('/store', 'ProductController@store');
+        //共用功能
         Route::get('/edit/{id}', 'ProductController@edit');
-        Route::post('/update/{id}', 'ProductController@update');
+        Route::POST('/update/{id}', 'ProductController@update');
         Route::get('/delete/{id}', 'ProductController@delete');
         Route::post('/imgUpload', 'ProductController@imgUpload');
         Route::post('/imgDelete', 'ProductController@imgDelete');

@@ -1,5 +1,5 @@
 @extends('layouts.backstage-template')
-
+@section('title','會員管理')
 @section('css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 @endsection
