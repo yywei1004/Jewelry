@@ -62,9 +62,19 @@ Route::middleware('userlevel')->group(function(){
         Route::post('/imgDelete', 'ProductController@imgDelete');
     });
 
-    //產品
+    //商品專區
     Route::prefix('/product')->group(function(){
         Route::get('/','ProductController@index');
+        //折扣專區
+        Route::get('/discountcreate', 'NewsController@discountcreate');
+        Route::POST('/discountstore', 'NewsController@discountstore');
+        Route::get('/discountedit/{id}', 'NewsController@discountedit');
+        Route::POST('/discountupdate/{id}', 'NewsController@discountupdate');
+        Route::get('/discountdelete/{id}', 'NewsController@discountdelete');
+        Route::post('/imgupload', 'NewsController@imgUpload');
+        Route::post('/imgDelete', 'ProductController@imgDelete');
+
+
         Route::get('/create', 'ProductController@create');
         Route::post('/store', 'ProductController@store');
         Route::get('/edit/{id}', 'ProductController@edit');

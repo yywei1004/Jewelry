@@ -32,7 +32,7 @@
                             <span class="col-2">編號</span>
                             <span class="col-3">公告日期</span>
                             <span class="col-5">標題</span>
-                            <a class="col-2" href="/news/discountcreate" title="新增折扣" style="color:gray"><i
+                            <a class="col-2" href="/product/discountcreate" title="新增折扣專區" style="color:gray"><i
                                     class="fas fa-plus-square"></i></a>
                         </div>
                         {{-- @foreach ($theme as $item)
@@ -57,7 +57,7 @@
                             <span class="col-3">公告日期</span>
                             <span class="col-4">預覽圖</span>
                             <span class="col-3">標題</span>
-                            <a class="col-2" href="/news/themecreate" title="新增最新" style="color:gray"><i
+                            <a class="col-2" href="/product/latestcreate" title="新增最新商品" style="color:gray"><i
                                     class="fas fa-plus-square"></i></a>
                         </div>
                         {{-- @foreach ($theme as $item)
@@ -84,7 +84,7 @@
                             <span class="col-2">編號</span>
                             <span class="col-3">公告日期</span>
                             <span class="col-5">標題</span>
-                            <a class="col-2" href="/news/selectcreate" title="新增精選" style="color:gray"><i
+                            <a class="col-2" href="/product/selectcreate" title="新增精選商品" style="color:gray"><i
                                     class="fas fa-plus-square"></i></a>
                         </div>
                         {{-- @foreach ($theme as $item)
@@ -109,7 +109,7 @@
                             <span class="col-3">公告日期</span>
                             <span class="col-4">預覽圖</span>
                             <span class="col-3">標題</span>
-                            <a class="col-2" href="/news/themecreate" title="新增主題" style="color:gray"><i
+                            <a class="col-2" href="/product/customcreate" title="新增客製專區" style="color:gray"><i
                                     class="fas fa-plus-square"></i></a>
                         </div>
                         {{-- @foreach ($theme as $item)
