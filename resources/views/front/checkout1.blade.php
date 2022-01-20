@@ -73,7 +73,7 @@
                             <hr>
                             <!-- *商品內容 -->
                             <div class="order-lists">
-                                <div class="order-list my-5">
+                                <div class="order-list py-5">
                                     <div class="order-item-info">
                                         <img class="order-info-img" src="./image/購買商品-1.jpg" alt="">
                                         <div class="order-info-content p-4">
@@ -104,8 +104,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
-                                <div class="order-list my-5">
+                                <div class="order-list py-5">
                                     <div class="order-item-info">
                                         <img class="order-info-img" src="./image/購買商品-1.jpg" alt="">
                                         <div class="order-info-content p-4">
@@ -136,8 +135,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
-                                <div class="order-list my-5">
+                                <div class="order-list py-5">
                                     <div class="order-item-info">
                                         <img class="order-info-img" src="./image/購買商品-1.jpg" alt="">
                                         <div class="order-info-content p-4">
@@ -168,7 +166,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
                             </div>
                             <!-- *送貨方式-->
                             <div class="d-flex justify-content-between">

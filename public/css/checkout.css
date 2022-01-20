@@ -115,6 +115,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 25px;
+  border-bottom: 1px solid #eae8e8;
 }
 
 .order-list .order-item-number {
