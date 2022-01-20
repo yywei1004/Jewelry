@@ -135,6 +135,10 @@
   height: 90px;
 }
 
+.order-info-img {
+  width: 169px;
+}
+
 .order-item-qty button {
   background-color: transparent;
   width: 34px;
@@ -258,7 +262,7 @@
   border: 0;
 }
 
-.order-item-step button:nth-child(2) > a {
+.order-item-step button:nth-child(2) {
   color: #ffff;
   letter-spacing: 4px;
   line-height: 40px;

@@ -94,10 +94,11 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a> --}}
                     <a href="/index">index</a>
+                    <a href="/order">order</a>
                     <a href="/user">user</a>
                     <a href="/news">news</a>
                     <a href="/product">product</a>
-                    <a href="/order">order</a>
+                    <a href="/feedback">feedback</a>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
 let listItems = document.querySelectorAll(".order-list");
 // 單品數量
 let inputItems = document.querySelectorAll(".order-input");
-console.log(inputItems);
+// console.log(inputItems);
 // 按鈕-
 let reduceBtns = document.querySelectorAll(".order-reduce");
 // 按鈕+
@@ -20,6 +20,7 @@ let chartFee = document.querySelector(".fee");
 // 購物車總 總計
 let chartTotal = document.querySelector(".total");
 
+let csrf = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
 
 // 初始設定  每個單品總價都重算一次
 window.onload = function (){
@@ -36,6 +37,21 @@ reduceBtns.forEach(function(btn, index){
         if (inputItems[index].value <= 1) {
             let replace = confirm("是否要移除該商品?");
             if (replace) {
+                var shoppingcart_id = reduceBtns[index].dataset.id
+                var formdata = new FormData()
+                formdata.append('_token', csrf)
+                formdata.append('shoppingcart_id', shoppingcart_id)
+
+                fetch('/deletetocart', {
+                    method: 'POST',
+                    body: formdata
+                })
+                // .then(response => response.text())
+                // .then(text => {
+                //     alert(text)
+                //     location.reload()
+                // });
+
                 listItems[index].remove();
             }else{
                 return;
@@ -99,7 +115,7 @@ function chartCount(){
         // console.log(priceItems[i].textContent);
     }
 
-    if (subtotal >= 100) fee = 0;
+    if (subtotal >= 1000) fee = 0;
     
     
     chartQty.innerHTML = qty;

@@ -61,6 +61,7 @@ class NewsController extends Controller
             'type' => 'theme',
             'name' => $request->name,
             'desc' => $request->desc,
+            'original_price' => $request->original_price,
             'price' => $request->price,
             'qty' => $request->qty,
         ]);
@@ -83,6 +84,7 @@ class NewsController extends Controller
         $product = Product::find($id);
         $product->name = $request->name;
         $product->desc = $request->desc;
+        $product->original_price = $request->original_price;
         $product->price = $request->price;
         $product->qty = $request->qty;
         $product->save();

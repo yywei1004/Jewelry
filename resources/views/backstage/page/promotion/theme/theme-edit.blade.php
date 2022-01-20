@@ -32,6 +32,10 @@
             
         </div>
         <div class="row">
+            <label for="price">商品原價</label>
+            <input type="number" id="original_price" name="price">
+        </div>
+        <div class="row">
             <label for="price">商品價格</label>
             <input type="number" id="price" name="price" value="{{$product->price}}">
         </div>

@@ -23,12 +23,15 @@ class FrontController extends Controller
 
     public function shopping_01(){
         $shoppingcart = ShoppingCart::where('user_id', Auth::user()->id)->get();
-        return view('front.cart-1',compact('shoppingcart'));
+        return view('front.checkout1',compact('shoppingcart'));
     }
 
     public function shopping_02(Request $request){
+        dd($request->all());
         ShoppingCart::where('user_id', Auth::user()->id)->delete();
         Session::put('step01',$request->all());
+
+
 
         $sum = 0;
         foreach ($request->total as $item){

@@ -21,7 +21,7 @@ class ProductController extends Controller
 
     //折扣專區
     public function discountcreate(){
-        return view('backstage.page.product.discount.discount-create');
+        return view('backstage.page.product.discount-create');
     }
 
     public function discountstore(Request $request){
@@ -29,6 +29,7 @@ class ProductController extends Controller
             'type' => 'discount',
             'name' => $request->name,
             'desc' => $request->desc,
+            'original_price' => $request->original_price,
             'price' => $request->price,
             'qty' => $request->qty,
         ]);
@@ -52,6 +53,7 @@ class ProductController extends Controller
             'type' => 'latest',
             'name' => $request->name,
             'desc' => $request->desc,
+            'original_price' => $request->original_price,
             'price' => $request->price,
             'qty' => $request->qty,
         ]);
@@ -86,6 +88,7 @@ class ProductController extends Controller
             'type' => 'select',
             'name' => $request->name,
             'desc' => $request->desc,
+            'original_price' => $request->original_price,
             'price' => $request->price,
             'qty' => $request->qty,
         ]);
@@ -109,6 +112,7 @@ class ProductController extends Controller
             'type' => 'custom',
             'name' => $request->name,
             'desc' => $request->desc,
+            'original_price' => $request->original_price,
             'price' => $request->price,
             'qty' => $request->qty,
         ]);
@@ -143,6 +147,7 @@ class ProductController extends Controller
         $product = Product::find($id);
         $product->name = $request->name;
         $product->desc = $request->desc;
+        $product->original_price = $request->original_price;
         $product->price = $request->price;
         $product->qty = $request->qty;
         $product->save();

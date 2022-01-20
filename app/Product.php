@@ -26,7 +26,7 @@ class Product extends Model
     /**
      * @var array
      */
-    protected $fillable = ['type', 'name', 'desc', 'price', 'qty', 'created_at', 'updated_at'];
+    protected $fillable = ['type', 'name', 'desc', 'price', 'qty', 'created_at', 'updated_at', 'original_price'];
 
     //一個產品有很多圖
     public function imgs(){
