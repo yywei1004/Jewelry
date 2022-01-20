@@ -222,8 +222,8 @@
                         <br>
                         <!-- *送出 -->
                         <div class="order-item-step">
-                            <button type="submit"><a href="./checkout2.html" class=""><i class="fas fa-chevron-left"></i> 上一步</a></button>
-                            <button><a href="./index.html" class="">完成訂單</a></button>
+                            <button type="button"><a href="./checkout2.html" class=""><i class="fas fa-chevron-left"></i> 上一步</a></button>
+                            <button type="button"><a href="./index.html" class="">完成訂單</a></button>
                         </div>
                     </div>
                 </div>
