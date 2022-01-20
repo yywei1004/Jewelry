@@ -71,7 +71,7 @@
                         <hr>
                         <!-- *商品內容 -->
                         <div class="order-lists">
-                            <div class="order-list my-5">
+                            <div class="order-list py-5">
                                 <div class="order-item-info">
                                     <img class="order-info-img" src="./image/購買商品-1.jpg" alt="">
                                     <div class="order-info-content p-4">
@@ -102,8 +102,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr>
-                            <div class="order-list my-5">
+                            <div class="order-list py-5">
                                 <!-- *商品名稱&圖 -->
                                 <div class="order-item-info">
                                     <img class="order-info-img" src="./image/購買商品-1.jpg" alt="">
@@ -135,8 +134,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr>
-                            <div class="order-list my-5">
+                            <div class="order-list py-5">
                                 <div class="order-item-info">
                                     <img class="order-info-img" src="./image/購買商品-1.jpg" alt="">
                                     <div class="order-info-content p-4">
@@ -167,7 +165,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr>
                         </div>
                         <!-- *寄送資料 -->
                         <div class="d-flex justify-content-between">
@@ -222,8 +219,8 @@
                         <br>
                         <!-- *送出 -->
                         <div class="order-item-step">
-                            <button type="submit"><a href="./checkout2.html" class=""><i class="fas fa-chevron-left"></i> 上一步</a></button>
-                            <button><a href="./index.html" class="">完成訂單</a></button>
+                            <button type="button"><a href="./checkout2.html" class=""><i class="fas fa-chevron-left"></i> 上一步</a></button>
+                            <button type="button"><a href="./index.html" class="">完成訂單</a></button>
                         </div>
                     </div>
                 </div>
