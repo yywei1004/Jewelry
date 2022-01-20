@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- Button trigger modal -->
+    <!-- !我是測試按鈕  不用複製我! -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shopping-show">
         Launch demo modal
     </button>
