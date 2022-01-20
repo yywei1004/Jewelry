@@ -76,7 +76,7 @@
                             <!-- *商品內容 -->
                             <div class="order-lists">
                                 @foreach ($shoppingcart as $item)
-                                    <div class="order-list my-5">
+                                    <div class="order-list py-5">
                                         <div class="order-item-info">
                                             <img class="order-info-img" src="{{$item->product->imgs[0]->image_path}}" alt="">
                                             <div class="order-info-content p-4">
@@ -110,7 +110,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <hr>
                                 @endforeach
                             </div>
                             <!-- *送貨方式-->
