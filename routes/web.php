@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//測試看畫面
+Route::get('/test', function () {
+    return view('front.checkout3');
+});
 //前台 不須登入
 Route::get('/', function () {
     return view('welcome');

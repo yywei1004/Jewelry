@@ -57,7 +57,7 @@
                             我的購物車
                         </div>
                         <div class="">
-                            (3件) 合計 : NT$5,678
+                            ({{$qty_total}}件) 合計 : NT${{$total}}
                         </div>
                     </div>
                     <div class="card-body">
@@ -70,31 +70,32 @@
                         </div>
                         <hr>
                         <!-- *填寫資料 -->
-                        <form action="" method="post" class="needs-validation" novalidate>
+                        <form action="/shopping03" method="post" class="needs-validation" novalidate>
+                            @csrf
                             <div id="order-info">
                                 <!-- *顧客資料-->
                                 <div class="row mb-5">
                                     <div class="col-4">
                                         <div class="col-12">
                                             <label for="name">顧客姓名 :</label>
-                                            <input type="text" class="form-control" id="name" name="name" value=""
+                                            <input type="text" class="form-control" id="name" name="name" value="{{Auth::user()->name}}"
                                                 required>
                                         </div>
                                         <div class="col-12">
                                             <label for="email">Email :</label>
-                                            <input type="email" placeholder="e-mail address" class="form-control" id="email" name="email" value=""
+                                            <input type="email" placeholder="e-mail address" class="form-control" id="email" name="email" value="{{Auth::user()->email}}"
                                                 required>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="col-12">
                                             <label for="phone">手機 :</label>
-                                            <input type="tel" placeholder="09xx-xxx-xxx" class="form-control" id="phone" name="phone" value=""
+                                            <input type="tel" placeholder="09xx-xxx-xxx" class="form-control" id="phone" name="phone" value="{{Auth::user()->phone}}"
                                                 required>
                                         </div>
                                         <div class="col-12">
                                             <label for="birthday">生日 :</label>
-                                            <input type="date" placeholder="(YYY/MM/DD)" class="form-control" id="birthday" name="birthday" value=""
+                                            <input type="date" placeholder="(YYY/MM/DD)" class="form-control" id="birthday" name="birthday" value="2002-02-02"
                                                 required>
                                         </div>
                                     </div>
@@ -115,9 +116,9 @@
                                     <div class="d-flex">
                                         <div class="d-flex flex-wrap w-50 mr-5">
                                             <label for="name">收件人名稱 :</label>
-                                            <input type="text" placeholder="name" class="form-control mb-3" id="name" name="name" value="">
+                                            <input type="text" placeholder="name" class="form-control mb-3" id="name" name="name" value="{{Auth::user()->name}}">
                                             <label for="phone">收件人手機 :</label>
-                                            <input type="tel" placeholder="09xx-xxx-xxx" class="form-control" id="phone" name="phone" value="" >
+                                            <input type="tel" placeholder="09xx-xxx-xxx" class="form-control" id="phone" name="phone" value="{{Auth::user()->phone}}" >
                                         </div>
                                         <div class="">
                                             <div class="" >
@@ -135,7 +136,7 @@
                                 <div class="order-item-step">
                                     <button type="submit"><a href="./checkout1.html" class=""><i
                                                 class="fas fa-chevron-left"></i> 上一步</a></button>
-                                    <button><a href="./checkout3.html" class="">下一步</a></button>
+                                    <button type="submit">送出訂單</button>
                                 </div>
                             </div>
                         </form>

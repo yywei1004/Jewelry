@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $order_number
  * @property string $created_at
  * @property string $updated_at
+ * @property string $desc
  */
 class Order extends Model
 {
@@ -30,7 +31,7 @@ class Order extends Model
     /**
      * @var array
      */
-    protected $fillable = ['user_id', 'total_price', 'shipping_fee', 'address', 'phone', 'ship_way', 'pay_way', 'status', 'order_number', 'created_at', 'updated_at'];
+    protected $fillable = ['user_id', 'total_price', 'shipping_fee', 'address', 'phone', 'ship_way', 'pay_way', 'status', 'order_number', 'created_at', 'updated_at', 'remark'];
 
     //訂單屬於使用者
     public function user(){

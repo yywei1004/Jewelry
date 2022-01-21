@@ -261,9 +261,10 @@
   margin-left: 40px;
   font-size: 25px;
   border: 0;
+  color: #ffff;
 }
 
-.order-item-step button:nth-child(2) {
+.order-item-step button:nth-child(2) > a {
   color: #ffff;
   letter-spacing: 4px;
   line-height: 40px;

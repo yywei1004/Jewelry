@@ -71,100 +71,39 @@
                         <hr>
                         <!-- *商品內容 -->
                         <div class="order-lists">
-                            <div class="order-list py-5">
-                                <div class="order-item-info">
-                                    <img class="order-info-img" src="./image/購買商品-1.jpg" alt="">
-                                    <div class="order-info-content p-4">
-                                        <div class="h4 order-list-name">閃鑽開合小圈耳環 | 設計師精選 </div>
+                            @foreach ($order_detail as $item)
+                                <div class="order-list py-5">
+                                    <div class="order-item-info">
+                                        <img class="order-info-img" src="{{$item->product->imgs[0]->image_path}}" alt="">
+                                        <div class="order-info-content p-4">
+                                            <div class="h4 order-list-name">{{$item->product->name}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="order-item-number">
+                                        <!-- *商品價格 -->
+                                        <div class="ml-2 order-item-price">
+                                            <span>NT$
+                                                <span>{{$item->price}}</span>
+                                            </span>
+                                            <span>NT$
+                                                <span>{{$item->product->original_price}}</span>
+                                            </span>
+                                        </div>
+                                        <!-- *商品數量 -->
+                                        <div class="order-item-qty">
+                                            <span>X</span>
+                                            <span>{{$item->qty}}</span>
+                                        </div>
+                                        <!-- *商品單價 -->
+                                        <div class="order-item-total ">
+                                            <span class="order-price-fake sr-only">10.5</span>
+                                            <span class="order-price">$
+                                                <span>{{$item->product->price * $item->qty}}</span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="order-item-number">
-                                    <!-- *商品價格 -->
-                                    <div class="ml-2 order-item-price">
-                                        <span>NT$
-                                            <span>988</span>
-                                        </span>
-                                        <span>NT$
-                                            <span>1500</span>
-                                        </span>
-                                    </div>
-                                    <!-- *商品數量 -->
-                                    <div class="order-item-qty">
-                                        <span>X</span>
-                                        <span>1</span>
-                                    </div>
-                                    <!-- *商品單價 -->
-                                    <div class="order-item-total ">
-                                        <span class="order-price-fake sr-only">10.5</span>
-                                        <span class="order-price">$
-                                            <span>10.5</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="order-list py-5">
-                                <!-- *商品名稱&圖 -->
-                                <div class="order-item-info">
-                                    <img class="order-info-img" src="./image/購買商品-1.jpg" alt="">
-                                    <div class="order-info-content p-4">
-                                        <div class="h4 order-list-name">閃鑽開合小圈耳環 | 設計師精選 </div>
-                                    </div>
-                                </div>
-                                <div class="order-item-number">
-                                    <!-- *商品價格 -->
-                                    <div class="ml-2 order-item-price">
-                                        <span>NT$
-                                            <span>988</span>
-                                        </span>
-                                        <span>NT$
-                                            <span>1500</span>
-                                        </span>
-                                    </div>
-                                    <!-- *商品數量 -->
-                                    <div class="order-item-qty">
-                                        <span>X</span>
-                                        <span>1</span>
-                                    </div>
-                                    <!-- *商品單價 -->
-                                    <div class="order-item-total ">
-                                        <span class="order-price-fake sr-only">10.5</span>
-                                        <span class="order-price">$
-                                            <span>10.5</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="order-list py-5">
-                                <div class="order-item-info">
-                                    <img class="order-info-img" src="./image/購買商品-1.jpg" alt="">
-                                    <div class="order-info-content p-4">
-                                        <div class="h4 order-list-name">閃鑽開合小圈耳環 | 設計師精選 </div>
-                                    </div>
-                                </div>
-                                <div class="order-item-number">
-                                    <!-- *商品價格 -->
-                                    <div class="ml-2 order-item-price">
-                                        <span>NT$
-                                            <span>988</span>
-                                        </span>
-                                        <span>NT$
-                                            <span>1500</span>
-                                        </span>
-                                    </div>
-                                    <!-- *商品數量 -->
-                                    <div class="order-item-qty">
-                                        <span>X</span>
-                                        <span>1</span>
-                                    </div>
-                                    <!-- *商品單價 -->
-                                    <div class="order-item-total ">
-                                        <span class="order-price-fake sr-only">10.5</span>
-                                        <span class="order-price">$
-                                            <span>10.5</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <!-- *寄送資料 -->
                         <div class="d-flex justify-content-between">
@@ -178,16 +117,16 @@
                                         <span class="mb-4" >
                                             收件人姓名 : 
                                         </span>
-                                        <span>D霸客</span>
+                                        <span>{{Auth::user()->name}}</span>
                                     </div>
                                     <div>
                                         <span class="mb-4" >收件人手機:
                                         </span>
-                                        <span>0912345678 </span>
+                                        <span>{{$order->phone}}</span>
                                     </div>
                                     <div>
-                                        <span class="mb-4" >收件門市 :</span>
-                                        <span>小琉球門市</span>
+                                        <span class="mb-4" >收件位址 :</span>
+                                        <span>{{$order->address}}</span>
                                     </div>
                                     
                                 </div>
@@ -200,19 +139,19 @@
                                 <div class="hr2"></div>
                                 <div class="order-qty">
                                     <span>數量:</span>
-                                    <span class="qty">3</span>
+                                    <span class="qty">{{$qty_total}}</span>
                                 </div>
                                 <div class="order-subtotal">
                                     <span>小計:</span>
-                                    <span class="subtotal">$24.90</span>
+                                    <span class="subtotal">{{$subtotal}}</span>
                                 </div>
                                 <div class="order-fee">
                                     <span>運費:</span>
-                                    <span class="fee">$24.90</span>
+                                    <span class="fee">{{$shipfee}}</span>
                                 </div>
                                 <div class="order-total">
                                     <span>總計:</span>
-                                    <span class="total">$24.90</span>
+                                    <span class="total">{{$total}}</span>
                                 </div>
                             </div>
                         </div>
@@ -220,7 +159,7 @@
                         <!-- *送出 -->
                         <div class="order-item-step">
                             <button type="button"><a href="./checkout2.html" class=""><i class="fas fa-chevron-left"></i> 上一步</a></button>
-                            <button type="button"><a href="./index.html" class="">完成訂單</a></button>
+                            <button type="button"><a href="/trade/{{$order->id}}" class="">金流結帳</a></button>
                         </div>
                     </div>
                 </div>

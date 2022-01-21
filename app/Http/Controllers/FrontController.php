@@ -27,42 +27,44 @@ class FrontController extends Controller
     }
 
     public function shopping_02(Request $request){
-        dd($request->all());
+        $length = count($request->qty);
+        $subtotal = 0;
+        $qty_total = 0;
+        for ($i=0; $i < $length; $i++) { 
+            $subtotal += $request->price[$i] * $request->qty[$i];
+            $qty_total += $request->qty[$i];
+        }
+        
         ShoppingCart::where('user_id', Auth::user()->id)->delete();
         Session::put('step01',$request->all());
-
-
-
-        $sum = 0;
-        foreach ($request->total as $item){
-            $sum = $sum + $item;
-        }
-        $merch = count($request->total);
-        return view('front.cart-2', compact('sum','merch') );
-    }
-    public function shopping_03(Request $request){
-        Session::put('step02',$request->all());
-
-        return view('front.cart-3');
-    }
-    public function store(Request $request){
-
-        //session取資料方法之一: 單純讀取出資料, 不清空
-        $shop01 =  Session::get('step01');
-        $shop02 =  Session::get('step02');
+        Session::put('subtotal',$subtotal);
+        Session::put('qty_total',$qty_total);
+        
         $total = 0;
-        foreach ($shop01['total'] as $key => $value) {
-            $total = $total + $value;
-        }
-
-        if ($shop02['shipway'] == 1){
-            $total = $total + 200;
-            $shipfee = 200;
+        if($subtotal >= 1000){ //免運金額
+            $total = $subtotal;
+            $shipfee = 0;
         }else{
-            $total = $total + 60;
-            $shipfee = 60;
+            if ($request->ship_way <= 5){ //運費60
+                $total = $subtotal + 60;
+                $shipfee = 60;
+            }else{
+                $total = $subtotal + 100; //運費100
+                $shipfee = 100;
+            }
         }
+        Session::put('total',$total);
+        Session::put('shipfee',$shipfee);
 
+        return view('front.checkout2', compact('qty_total','total') );
+    }
+
+    public function shopping_03(Request $request){
+        $step01 =  Session::get('step01');
+        $subtotal =  Session::get('subtotal');
+        $qty_total =  Session::get('qty_total');
+        $total =  Session::get('total');
+        $shipfee =  Session::get('shipfee');
 
         $order = Order::create([
             'total_price' => $total,
@@ -70,41 +72,38 @@ class FrontController extends Controller
             'user_id' => Auth::user()->id, 
             'address' => $request->address, 
             'phone' => $request->phone,  
-            'ship_way' => $shop02['shipway'], 
-            'status' => 1,
+            'ship_way' => $step01['ship_way'], 
+            'remark' => $request->remark,
+            'status' => 1, //狀態:未付款
         ]);
 
-        foreach ($shop01['total'] as $key => $value) {
+        foreach ($step01['qty'] as $key => $value) {
             OrderDetail::create([
-                'product_id' => $shop01['product_id'][$key],
-                'qty' => $shop01['qty'][$key],
-                'price' => $shop01['price'][$key],
+                'product_id' => $step01['product_id'][$key],
+                'qty' => $step01['qty'][$key],
+                'price' => $step01['price'][$key],
                 'order_id' => $order->id,
             ]);
         }
+
+        $order_detail = OrderDetail::where('order_id',$order->id)->get();
+
+        //訂單編號 = 日期 + order的id
+        $order->order_number = str_replace('-','',substr($order->created_at,0,10)).$order->id;
+        $order->save();
+
         //成功成立訂單後 將session清空
         Session::forget('step01');
-        Session::forget('step02');
-    
-        return redirect('/shopping04/'. $order->id);
-    }
+        Session::forget('subtotal');
+        Session::forget('qty_total');
+        Session::forget('total');
+        Session::forget('shipfee');
 
-    public function shopping_04($id){
-        
-        $order = Order::find($id);
-        //訂單編號 = 日期 + order的id
-        $order->order_number = str_replace('-','',substr($order->created_at,0,10)).$id;
-        $order->save();
-        return view('front.cart-4', compact('order'));
+        return view('front.checkout3',compact('order','order_detail','subtotal','qty_total','shipfee','total'));
     }
 
     public function addtocart(Request $request){
-
-        //先藉由ID去找商品, 然後將商品加入購物車(也就是在shopping_carts新增一筆資料)
-        //由於前端頁面設計只有單純的加入購物車按鈕, 我們預設他的數量是1
-
         $product = Product::find($request->product_id);
-
         ShoppingCart::create([
             'product_id' => $product->id,
             'qty' => 1,
@@ -115,7 +114,6 @@ class FrontController extends Controller
     }
 
     public function deletetocart(Request $request){
-
         ShoppingCart::find($request->shoppingcart_id)->delete();
         return "刪除成功";
     }

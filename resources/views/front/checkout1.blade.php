@@ -99,7 +99,6 @@
                                                 <input class="order-input" type="number" id="qty{{$item->id}}" name="qty[]" value="{{$item->qty}}">
                                                 <input type="number" id="product_id{{$item->id}}" name="product_id[]" value="{{$item->product->id}}" hidden>
                                                 <input type="number" id="price{{$item->id}}" name="price[]" value="{{$item->price}}" hidden >
-                                                <input type="number" id="total{{$item->id}}" name="total[]" value="{{$item->qty * $item->price}}"  hidden>
                                                 <button type="button" class="order-plus">+</button>
                                             </div>
                                             <div class="order-item-total ">
