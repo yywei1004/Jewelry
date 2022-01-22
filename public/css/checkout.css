@@ -131,9 +131,10 @@
           align-items: center;
 }
 
-.order-list .order-item-info .order-info-content {
+.order-list .order-item-info .order-list-name {
   width: 300px;
   height: 90px;
+  padding-left: 25px;
 }
 
 .order-info-img {
