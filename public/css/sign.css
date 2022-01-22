@@ -1,0 +1,161 @@
+body {
+  background: #FFF4EF;
+}
+
+.containers {
+  padding: 279px 360px 191px 360px;
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  width: 250px;
+  height: 168px;
+  left: 50%;
+  top: 18%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.form-block {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 610px;
+  border-radius: 6px;
+  padding: 90px 126px;
+  background: #ffffff;
+  -webkit-box-shadow: 12px 12px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 12px 12px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-inside-block {
+  width: 100%;
+  height: 100%;
+}
+
+.form-inside-block .form-choose {
+  border-right: 1px solid #c4c4c4;
+  padding-left: 0;
+  padding-right: 60px;
+}
+
+.form-inside-block .form-choose .signin {
+  font-size: 36px;
+  width: 100%;
+  height: calc(100% / 2);
+  padding: 52px 120px 52px 60px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 53px;
+  letter-spacing: 1.5%;
+  border-bottom: 1px solid #c4c4c4;
+  text-decoration: none;
+}
+
+.form-inside-block .form-choose .signup {
+  font-size: 36px;
+  width: 100%;
+  height: calc(100% / 2);
+  padding: 52px 120px 52px 60px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 53px;
+  letter-spacing: 1.5%;
+  text-decoration: none;
+}
+
+.form-input {
+  width: 100%;
+  height: 100%;
+  padding: 73px 0 0 85px;
+}
+
+.form-input .email-address, .form-input .password, .form-input .name, .form-input .birthday {
+  border-bottom: 1px solid #c4c4c4;
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+}
+
+.form-input .email-address label, .form-input .password label, .form-input .name label, .form-input .birthday label {
+  font-size: 25px;
+  margin: 0;
+}
+
+.form-input .email-address input, .form-input .password input, .form-input .name input, .form-input .birthday input {
+  width: 100%;
+  font-family: Noto Sans Gujarati UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: #c4c4c4;
+}
+
+.form-input .email-address ::-webkit-input-placeholder, .form-input .password ::-webkit-input-placeholder, .form-input .name ::-webkit-input-placeholder, .form-input .birthday ::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+.form-input .email-address :-ms-input-placeholder, .form-input .password :-ms-input-placeholder, .form-input .name :-ms-input-placeholder, .form-input .birthday :-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.form-input .email-address ::-ms-input-placeholder, .form-input .password ::-ms-input-placeholder, .form-input .name ::-ms-input-placeholder, .form-input .birthday ::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.form-input .email-address ::placeholder, .form-input .password ::placeholder, .form-input .name ::placeholder, .form-input .birthday ::placeholder {
+  color: #c4c4c4;
+}
+
+.form-input .birthday {
+  margin: 0;
+}
+
+.form-input .birthday ::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(70%);
+          filter: invert(70%);
+}
+
+.form-input .remember-me input {
+  width: 20px;
+  height: 20px;
+}
+
+.form-input .remember-me div {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.form-input .password-forget .h4 {
+  font-size: 20px;
+}
+
+.form-input button {
+  background: #fea8a3;
+  width: 145px;
+  height: 65px;
+  -webkit-filter: drop-shadow(6px 7px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(6px 7px 4px rgba(0, 0, 0, 0.25));
+  border: 0;
+  outline: none;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 146.7%;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+label {
+  font-size: 25px;
+  padding-right: 24px;
+}
+
+.h4 {
+  font-size: 20px;
+}
+/*# sourceMappingURL=sign.css.map */
