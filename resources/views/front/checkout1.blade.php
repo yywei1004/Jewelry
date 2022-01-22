@@ -56,10 +56,10 @@
             </div>
             <form action="/shopping02" method="POST">
                 @csrf
+                <!-- *訂購清單 -->
                 <div class="card-body">
-                    <!-- *訂購清單 -->
+                    <!-- *標題們 -->
                     <div class="d-flex flex-wrap justify-content-between">
-                        <!-- *標題們 -->
                         <div class="order-items-info h4">訂單資料</div>
                         <div class="order-items-number">
                             <span class="h4">單件價格</span>
