@@ -100,7 +100,7 @@
                             </div>
                             <!-- *送貨資料  -->
                             <div class="order-info-post">
-                                <label class="order-items-info my-1 mr-2" for="ship_way">送貨方式</label>
+                                <label class="order-items-info my-1 mr-2" for="ship_way">送貨資料</label>
                                 <hr>
                                 <div class="form-check d-flex align-items-center mb-4">
                                     <input class="form-check-input" type="checkbox" value="" id="user_info">
@@ -108,8 +108,8 @@
                                         同顧客資料
                                     </label>
                                 </div>
-                                <div class="d-flex">
-                                    <div class="d-flex flex-wrap w-50 mr-5">
+                                <div class="recipient-group d-flex">
+                                    <div class="recipient-content mr-5 d-flex flex-wrap">
                                         <label for="name">收件人名稱 :</label>
                                         <input type="text" placeholder="name" class="form-control mb-3" id="name"
                                             name="name" value="{{ Auth::user()->name }}">
