@@ -1,0 +1,183 @@
+.containers {
+  padding: 62px 310px;
+}
+
+.containers .container-title {
+  width: 1300px;
+  margin-bottom: 30px;
+  font-family: Noto Sans Gujarati UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 153%;
+  /* identical to box height, or 46px */
+  letter-spacing: -0.02em;
+  color: #ad7d47;
+}
+
+.containers .form-table {
+  width: 1300px;
+  height: 760px;
+  border: 1px solid #8c8c8b;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.containers .form-table .form-title {
+  font-family: Noto Sans Gujarati UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  /* identical to box height, or 46px */
+  letter-spacing: -0.02em;
+  color: #8c8c8b;
+}
+
+.containers .form-table .form-title-all {
+  width: 650px;
+  height: 90px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  line-height: 90px;
+}
+
+.containers .form-table .form-title-left {
+  background: rgba(140, 140, 139, 0.07);
+  border: 1px solid #aaaaa9;
+  border-top-style: none;
+  border-left-style: none;
+}
+
+.containers .form-table .form-main {
+  position: relative;
+  margin: 80px;
+}
+
+.containers .form-table .form-main .form-items {
+  padding: 0;
+  margin: 0;
+  width: 1140px;
+}
+
+.containers .form-table .form-main .col-6 {
+  padding: 0;
+  margin: 0;
+}
+
+.containers .form-table .form-name {
+  font-family: Noto Sans Gujarati UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 153%;
+  /* identical to box height, or 46px */
+  letter-spacing: -0.02em;
+  margin-bottom: 60px;
+  color: #8c8c8b;
+}
+
+.containers .form-table .form-item {
+  margin-bottom: 40px;
+  list-style-type: none;
+}
+
+.containers .form-table .form-item input::-webkit-outer-spin-button,
+.containers .form-table .form-item input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.containers .form-table .form-item .form-item-input {
+  border: 1px solid #aaaaa9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  width: 420px;
+  height: 60px;
+  font-size: 25px;
+}
+
+.containers .form-table .form-item ::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+.containers .form-table .form-item :-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.containers .form-table .form-item ::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.containers .form-table .form-item ::placeholder {
+  color: #c4c4c4;
+}
+
+.containers .form-table .form-item-btn {
+  width: 420px;
+  height: 53px;
+  background: #b0b0b0;
+  font-family: Noto Sans Gujarati UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  /* identical to box height */
+  border: 1px solid #b0b0b0;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.containers .form-table .form-item-name {
+  margin: 0;
+  font-family: Noto Sans Gujarati UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 60px;
+  /* identical to box height */
+  letter-spacing: -0.02em;
+  color: #8c8c8b;
+}
+
+.containers .form-table .form-bottom-cancle {
+  position: absolute;
+  left: 800px;
+  top: 480px;
+  background-color: #ffffff;
+  width: 110px;
+  height: 73px;
+  border: 1px solid #8c8c8b;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Noto Sans Gujarati UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  /* identical to box height */
+  letter-spacing: -0.02em;
+  color: #8c8c8b;
+}
+
+.containers .form-table .form-bottom-savechange {
+  position: absolute;
+  left: 960px;
+  top: 480px;
+  width: 180px;
+  height: 73px;
+  background: #fea8a3;
+  font-family: Noto Sans Gujarati UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  /* identical to box height */
+  letter-spacing: -0.02em;
+  border: 1px solid #fea8a3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+}
+/*# sourceMappingURL=login-page.css.map */
