@@ -83,17 +83,19 @@
                                         <span>{{ $item->product->original_price }}</span>
                                     </span>
                                 </div>
-                                <!-- *商品數量 -->
-                                <div class="order-item-qty">
-                                    <span>X</span>
-                                    <span>{{ $item->qty }}</span>
-                                </div>
-                                <!-- *商品單價 -->
-                                <div class="order-item-total ">
-                                    <span class="order-price-fake sr-only">10.5</span>
-                                    <span class="order-price">$
-                                        <span>{{ $item->product->price * $item->qty }}</span>
-                                    </span>
+                                <div class="qtytotal-group d-flex">
+                                    <!-- *商品數量 -->
+                                    <div class="order-item-qty">
+                                        <span>X</span>
+                                        <span>{{ $item->qty }}</span>
+                                    </div>
+                                    <!-- *商品單價 -->
+                                    <div class="order-item-total ">
+                                        <span class="order-price-fake sr-only">10.5</span>
+                                        <span class="order-price">$
+                                            <span>{{ $item->product->price * $item->qty }}</span>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

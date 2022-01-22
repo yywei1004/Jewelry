@@ -87,23 +87,25 @@
                                             <span>{{ $item->product->original_price }}</span>
                                         </span>
                                     </div>
-                                    <!-- *商品數量 -->
-                                    <div class="order-item-qty">
-                                        <button type="button" class="order-reduce"
-                                            data-id="{{ $item->id }}">-</button>
-                                        <input class="order-input" type="number" id="qty{{ $item->id }}"
-                                            name="qty[]" value="{{ $item->qty }}">
-                                        <input type="number" id="product_id{{ $item->id }}" name="product_id[]"
-                                            value="{{ $item->product->id }}" hidden>
-                                        <input type="number" id="price{{ $item->id }}" name="price[]"
-                                            value="{{ $item->price }}" hidden>
-                                        <button type="button" class="order-plus">+</button>
-                                    </div>
-                                    <div class="order-item-total ">
-                                        <span class="order-price-fake sr-only">{{ $item->price }}</span>
-                                        <span class="order-price">$
-                                            <span>{{ $item->price }}</span>
-                                        </span>
+                                    <div class="qtytotal-group d-flex">
+                                        <!-- *商品數量 -->
+                                        <div class="order-item-qty">
+                                            <button type="button" class="order-reduce"
+                                                data-id="{{ $item->id }}">-</button>
+                                            <input class="order-input" type="number" id="qty{{ $item->id }}"
+                                                name="qty[]" value="{{ $item->qty }}">
+                                            <input type="number" id="product_id{{ $item->id }}" name="product_id[]"
+                                                value="{{ $item->product->id }}" hidden>
+                                            <input type="number" id="price{{ $item->id }}" name="price[]"
+                                                value="{{ $item->price }}" hidden>
+                                            <button type="button" class="order-plus">+</button>
+                                        </div>
+                                        <div class="order-item-total ">
+                                            <span class="order-price-fake sr-only">{{ $item->price }}</span>
+                                            <span class="order-price">$
+                                                <span>{{ $item->price }}</span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
