@@ -127,6 +127,16 @@ class NewsController extends Controller
         return view('backstage.feedback.feedback',compact('feedback'));
     }
 
+    public function feedbackstore(Request $request){
+        Feedback::create([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'desc' => $request->name,
+        ]);
+        return redirect('/index')->with('msg','感謝您的寶貴意見');
+    }
+
     public function feedbackdelete($id){
         Feedback::find($id)->delete();
         return redirect('/feedback');

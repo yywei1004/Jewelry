@@ -239,7 +239,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/BN1.jpg);
+  
   width: 100%;
   height: 100vh;
 }
@@ -367,7 +367,7 @@ a {
 }
 
 /* 卡片上下顛倒 */
-#product-swiper .swiper-slide:nth-child(odd) {
+#product-swiper .swiper-slide:nth-child(odd) > .card {
   flex-direction: column-reverse;
 }
 
@@ -427,11 +427,11 @@ a {
   position: relative;
 }
 
-#merch .exclusive {
+#merch .card-deck .row .card::before{
   position: absolute;
+  z-index: 1;
   top: 5%;
   left: -2%;
-
   width: 95px;
   height: 30px;
   background-color: #ad7d47;
@@ -440,6 +440,20 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+#merch .discount .card-deck .row .col-4:nth-child(1) .card::before{
+  content: '網路獨賣';
+}
+#merch .selection .card-deck .row .col-4:nth-child(1) .card::before{
+  content: '網路獨賣';
+}
+
+#merch .discount .card-deck .row .col-4:nth-child(2) .card::before{
+  content: '專櫃獨賣';
+}
+#merch .selection .card-deck .row .col-4:nth-child(3) .card::before{
+  content: '專櫃獨賣';}
+
 #merch .add-cart {
   position: absolute;
   bottom: 29%;
@@ -454,6 +468,7 @@ a {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
 }
 #merch .add-cart:hover {
   background-color: #fea8a3;
@@ -518,6 +533,7 @@ footer .form-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: solid 1px transparent;
 }
 footer .form-btn:hover {
   background-color: #fea8a3;

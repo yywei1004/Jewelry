@@ -30,7 +30,7 @@
                         <h6 class="mx-3 my-0">圖片尺寸: 1920x825px</h6>
                     </div>
                     <div class="cover-img">
-                        <img id="img-change" src="{{ $cover[0]->cover_path }}" alt="">
+                        <img id="img-change" src="{{ @$cover[0]->cover_path }}" alt="">
                         <label for="images" title="修改封面" style="cursor: pointer"><i class="fas fa-edit"></i></label>
                         <input type="file" id="images" onchange="imgupload()" hidden>
                     </div>

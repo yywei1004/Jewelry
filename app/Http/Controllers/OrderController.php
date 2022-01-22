@@ -12,15 +12,20 @@ class OrderController extends Controller
         return view('backstage.order.order',compact('order'));
     }
 
-    public function look($id){
+    public function orderlook($id){
         $order = Order::find($id);
         return view('backstage.order.order-look',compact('order'));
     }
 
-    public function update($id, Request $request){
+    public function orderupdate($id, Request $request){
         $order = Order::find($id);
         $order->status = $request->status;
         $order->save();
+        return redirect('/order');
+    }
+
+    public function orderdelete($id){
+        Order::find($id)->delete();
         return redirect('/order');
     }
 }

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 //測試看畫面
 Route::get('/test', function () {
-    return view('front.checkout3');
+    return view('front.index');
 });
 //前台 不須登入
 Route::get('/', function () {
@@ -23,6 +23,7 @@ Route::get('/', function () {
 });
 Route::get('/index','FrontController@index');
 Route::post('/addtocart', 'FrontController@addtocart');
+Route::post('/feedbackstore', 'NewsController@feedbackstore');
 
 //需登入
 Route::middleware('userlevel')->group(function(){
@@ -39,11 +40,20 @@ Route::middleware('userlevel')->group(function(){
 //後台 需登入
 Route::middleware('userlevel')->group(function(){
 
-    //會員
+    //訂單管理
+    Route::prefix('/order')->group(function(){
+        Route::get('/', 'OrderController@index');
+        Route::get('/orderlook/{id}', 'OrderController@orderlook');
+        Route::post('/orderupdate/{id}', 'OrderController@orderupdate');
+        Route::get('/orderdelete/{id}', 'OrderController@orderdelete');
+    });
+
+    //會員管理
     Route::prefix('/user')->group(function () {
         Route::get('/', 'UserController@index');
-        Route::get('/look/{id}', 'UserController@look');
-        Route::post('/update/{id}', 'UserController@update');
+        Route::get('/userlook/{id}', 'UserController@userlook');
+        Route::post('/userupdate/{id}', 'UserController@userupdate');
+        Route::get('/userdelete/{id}', 'UserController@userdelete');
     });
 
     //行銷訊息
@@ -90,13 +100,6 @@ Route::middleware('userlevel')->group(function(){
         Route::get('/delete/{id}', 'ProductController@delete');
         Route::post('/imgUpload', 'ProductController@imgUpload');
         Route::post('/imgDelete', 'ProductController@imgDelete');
-    });
-
-    //訂單
-    Route::prefix('/order')->group(function(){
-        Route::get('/', 'OrderController@index');
-        Route::get('/look/{id}', 'OrderController@look');
-        Route::post('/update/{id}', 'OrderController@update');
     });
 
     //意見回饋

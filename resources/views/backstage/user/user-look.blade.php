@@ -5,7 +5,7 @@
 @endsection
   @section('main')
   <div class="container">
-    <form action="/user/update/{{$user->id}}" method="post">
+    <form action="/user/userupdate/{{$user->id}}" method="post">
        
         <div>姓名</div>
         <div>{{$user->name}}</div>

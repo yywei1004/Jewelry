@@ -14,18 +14,23 @@ class UserController extends Controller
         return view('backstage.user.user',compact('user'));
     }
 
-    public function look($id){
+    public function userlook($id){
 
         $user = User::find($id);
         return view('backstage.user.user-look',compact('user'));
     }
 
-    public function update($id, Request $request){
+    public function userupdate($id, Request $request){
 
         $user = User::find($id);
         $user->password = Hash::make($request->password);
         $user->save();
 
+        return redirect('/user');
+    }
+
+    public function userdelete($id){
+        User::find($id)->delete();
         return redirect('/user');
     }
 }

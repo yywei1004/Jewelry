@@ -1,5 +1,5 @@
 @extends('layouts.backstage-template')
-@section('title','商品專區')
+@section('title', '商品專區')
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/product.css') }}">
     <style>
@@ -45,8 +45,8 @@
                                 <div class="col-2">
                                     <a href="/product/edit/{{ $item->id }}" title="修改折扣" style="color:gray"><i
                                             class="fas fa-edit"></i></a>
-                                    <a href="/product/delete/{{ $item->id }}" title="刪除折扣" style="color:gray"><i
-                                            class="fas fa-trash-alt"></i></a>
+                                    <a href="/product/delete/{{ $item->id }}" title="刪除折扣" style="color:gray"
+                                        onclick="return check()"><i class="fas fa-trash-alt"></i></a>
                                 </div>
                             </div>
                         @endforeach
@@ -60,7 +60,8 @@
                         <div class="row">
                             <div class="col-4">
                                 <img id="img-change2" src="{{ @$cover[1]->cover_path }}" alt="">
-                                <label for="images2" title="修改最新商品封面" style="cursor: pointer"><i class="fas fa-edit"></i></label>
+                                <label for="images2" title="修改最新商品封面" style="cursor: pointer"><i
+                                        class="fas fa-edit"></i></label>
                                 <input type="file" id="images2" onchange="imgupload2()" hidden>
                                 <span>Banner尺寸: 1500x430px</span>
                             </div>
@@ -69,8 +70,8 @@
                                     <span class="col-2 px-2">編號</span>
                                     <span class="col-4 px-2">公告日期</span>
                                     <span class="col-4">產品名稱</span>
-                                    <a class="col-2" href="/product/latestcreate" title="新增最新" style="color:gray"><i
-                                            class="fas fa-plus-square"></i></a>
+                                    <a class="col-2" href="/product/latestcreate" title="新增最新"
+                                        style="color:gray"><i class="fas fa-plus-square"></i></a>
                                 </div>
                                 @foreach ($latest as $item)
                                     <div class="row d-flex border-top py-2">
@@ -80,14 +81,14 @@
                                         <div class="col-2 p-0">
                                             <a href="/product/edit/{{ $item->id }}" title="修改最新" style="color:gray"><i
                                                     class="fas fa-edit"></i></a>
-                                            <a href="/product/delete/{{ $item->id }}" title="刪除最新" style="color:gray"><i
-                                                    class="fas fa-trash-alt"></i></a>
+                                            <a href="/product/delete/{{ $item->id }}" title="刪除最新" style="color:gray"
+                                                onclick="return check()"><i class="fas fa-trash-alt"></i></a>
                                         </div>
                                     </div>
                                 @endforeach
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -112,8 +113,8 @@
                                 <div class="col-2 p-0">
                                     <a href="/product/edit/{{ $item->id }}" title="修改精選" style="color:gray"><i
                                             class="fas fa-edit"></i></a>
-                                    <a href="/product/delete/{{ $item->id }}" title="刪除精選" style="color:gray"><i
-                                            class="fas fa-trash-alt"></i></a>
+                                    <a href="/product/delete/{{ $item->id }}" title="刪除精選" style="color:gray"
+                                        onclick="return check()"><i class="fas fa-trash-alt"></i></a>
                                 </div>
                             </div>
                         @endforeach
@@ -127,7 +128,8 @@
                         <div class="row">
                             <div class="col-4">
                                 <img id="img-change3" src="{{ @$cover[2]->cover_path }}" alt="">
-                                <label for="images3" title="修改客製專區封面" style="cursor: pointer"><i class="fas fa-edit"></i></label>
+                                <label for="images3" title="修改客製專區封面" style="cursor: pointer"><i
+                                        class="fas fa-edit"></i></label>
                                 <input type="file" id="images3" onchange="imgupload3()" hidden>
                                 <span>Banner尺寸: 705x730px</span>
                             </div>
@@ -136,8 +138,8 @@
                                     <span class="col-2 px-2">編號</span>
                                     <span class="col-4 px-2">公告日期</span>
                                     <span class="col-4">產品名稱</span>
-                                    <a class="col-2" href="/product/customcreate" title="新增客製" style="color:gray"><i
-                                            class="fas fa-plus-square"></i></a>
+                                    <a class="col-2" href="/product/customcreate" title="新增客製"
+                                        style="color:gray"><i class="fas fa-plus-square"></i></a>
                                 </div>
                                 @foreach ($custom as $item)
                                     <div class="row d-flex border-top py-2">
@@ -147,8 +149,8 @@
                                         <div class="col-2 p-0">
                                             <a href="/product/edit/{{ $item->id }}" title="修改客製" style="color:gray"><i
                                                     class="fas fa-edit"></i></a>
-                                            <a href="/product/delete/{{ $item->id }}" title="刪除客製" style="color:gray"><i
-                                                    class="fas fa-trash-alt"></i></a>
+                                            <a href="/product/delete/{{ $item->id }}" title="刪除客製" style="color:gray"
+                                                onclick="return check()"><i class="fas fa-trash-alt"></i></a>
                                         </div>
                                     </div>
                                 @endforeach
@@ -165,6 +167,14 @@
     <script>
         var checked = document.querySelector('#news');
         checked.classList.add('checked');
+
+        function check() {
+            var check = confirm('確定刪除?');
+            if (check) {
+                return true;
+            }
+            return false;
+        }
     </script>
     <script>
         var input2 = document.querySelector('#images2');
@@ -192,7 +202,7 @@
                     });
                 });
             // window.location.reload()
-            setTimeout('window.location.reload()',500)
+            setTimeout('window.location.reload()', 500)
         }
     </script>
     <script>
@@ -221,7 +231,7 @@
                     });
                 });
             // window.location.reload()
-            setTimeout('window.location.reload()',500)
+            setTimeout('window.location.reload()', 500)
         }
     </script>
 @endsection

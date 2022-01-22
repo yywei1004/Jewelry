@@ -15,10 +15,14 @@ use Illuminate\Support\Facades\Session;
 class FrontController extends Controller
 {
     public function index(){
-        $cover = Cover::orderbydesc('id')->take(1)->get();
+        $cover = Cover::get();
         $news = Newz::orderbydesc('id')->take(3)->get();
-        $product = Product::get();
-        return view('front.index',compact('cover','news','product'));
+        $theme = Product::where('type','theme')->orderbydesc('id')->take(6)->get();
+        $discount = Product::where('type','discount')->orderbydesc('id')->take(3)->get();
+        $latest = Product::where('type','latest')->orderbydesc('id')->take(4)->get();
+        $select = Product::where('type','select')->orderbydesc('id')->take(3)->get();
+        $custom = Product::where('type','custom')->orderbydesc('id')->take(4)->get();
+        return view('front.index',compact('cover','news','theme','discount','latest','select','custom'));
     }
 
     public function shopping_01(){

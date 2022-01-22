@@ -28,7 +28,7 @@
 
             </tbody>
         </table>
-        <form action="/order/update/{{ $order->id }}" method="post">
+        <form action="/order/orderupdate/{{ $order->id }}" method="post">
             <div>金流單號</div>
             <div>{{ $order->order_number }}</div>
             <div>購買人</div>

@@ -25,8 +25,8 @@
                         <td>{{ $item->created_at }}</td>
                         <td>{{ count($item->order) }}</td>
                         <td>
-                            <a href="" title="修改會員" style="color:gray"><i class="fas fa-edit"></i></a>
-                            <a href="" title="刪除會員" style="color:gray" onclick="return check()"><i class="fas fa-trash-alt"></i></a>
+                            <a href="user/userlook/{{ $item->id }}" title="修改會員" style="color:gray"><i class="fas fa-edit"></i></a>
+                            <a href="user/userdelete/{{ $item->id }}" title="刪除會員" style="color:gray" onclick="return check()"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 @endforeach
