@@ -257,6 +257,7 @@
 }
 
 .order-item-step button:nth-child(2) {
+  color: #fff;
   background-color: #FEA8A3;
   padding: 16px 40px;
   margin-left: 40px;
