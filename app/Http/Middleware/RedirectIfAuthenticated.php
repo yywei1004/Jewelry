@@ -19,7 +19,10 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect(RouteServiceProvider::HOME);
+            //原版本
+            // return redirect(RouteServiceProvider::HOME);
+            //修改後
+            return redirect()->intended('/');
         }
 
         return $next($request);

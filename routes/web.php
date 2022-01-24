@@ -15,27 +15,25 @@ use Illuminate\Support\Facades\Route;
 */
 //測試看畫面
 Route::get('/test', function () {
-    return view('front.index');
+    return view('front.signin');
 });
 //前台 不須登入
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/index','FrontController@index');
+Route::get('/loginpage','FrontController@loginpage');
 Route::post('/addtocart', 'FrontController@addtocart');
 Route::post('/feedbackstore', 'NewsController@feedbackstore');
 
-//需登入
-Route::middleware('userlevel')->group(function(){
+//前台會員 需登入
+Route::middleware('member')->group(function(){
     Route::get('/shopping01', 'FrontController@shopping_01');
     Route::post('/shopping02', 'FrontController@shopping_02');
     Route::post('/shopping03', 'FrontController@shopping_03');
-    Route::post('/store', 'FrontController@store');
-    Route::get('/shopping04/{id}', 'FrontController@shopping_04');
     Route::post('/deletetocart', 'FrontController@deletetocart');
     Route::get('/trade/{id}', 'FrontController@trade');
 });
-
 
 //後台 需登入
 Route::middleware('userlevel')->group(function(){

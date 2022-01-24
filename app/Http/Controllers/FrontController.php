@@ -25,6 +25,10 @@ class FrontController extends Controller
         return view('front.index',compact('cover','news','theme','discount','latest','select','custom'));
     }
 
+    public function loginpage(){
+        return view('front.login-page');
+    }
+
     public function shopping_01(){
         $shoppingcart = ShoppingCart::where('user_id', Auth::user()->id)->get();
         return view('front.checkout1',compact('shoppingcart'));
