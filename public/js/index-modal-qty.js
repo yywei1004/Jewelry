@@ -7,6 +7,7 @@ let reduceBtns = document.querySelector(".order-reduce");
 let addBtns = document.querySelector(".order-plus");
 //庫存
 let storageQty = document.querySelector(".product-remaincount");
+console.log(storageQty);
 
 // 按鈕-
 reduceBtns.addEventListener('click',function(){
@@ -14,7 +15,7 @@ reduceBtns.addEventListener('click',function(){
     if(inputItems.value <= 0){
         inputItems.value = 1;
     }
-});    
+});    document.querySelector
 
 // 按鈕+
 addBtns.addEventListener('click',function(){

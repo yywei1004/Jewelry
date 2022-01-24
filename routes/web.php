@@ -15,12 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 //測試看畫面
 Route::get('/test', function () {
-    return view('front.signin');
+    return view('front.index-modal');
 });
+
 //前台 不須登入
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/index','FrontController@index');
 Route::get('/loginpage','FrontController@loginpage');
 Route::post('/addtocart', 'FrontController@addtocart');
@@ -37,6 +35,10 @@ Route::middleware('member')->group(function(){
 
 //後台 需登入
 Route::middleware('userlevel')->group(function(){
+
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
     //訂單管理
     Route::prefix('/order')->group(function(){

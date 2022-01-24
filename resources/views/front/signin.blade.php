@@ -20,7 +20,8 @@
 <body>
     <div class="containers">
         <a class="logo" href="">
-            <img src="./image/LOGO.svg" alt="">
+            <img src="{{asset('img/LOGO.svg
+            ')}}" alt="">
         </a>
         <div class="form-block">
             <div class="form-inside-block row ">
