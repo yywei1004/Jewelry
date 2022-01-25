@@ -79,6 +79,10 @@
   color: #AD7D47;
 }
 
+.product-price span:nth-child(1) {
+  font-size: 25px;
+}
+
 .product-price span:nth-child(2) {
   margin-top: 10px;
   text-decoration: line-through;

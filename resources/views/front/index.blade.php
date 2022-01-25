@@ -24,12 +24,12 @@
             @foreach ($news as $item)
                 <div class="col">
                     <ul class="news-update">
-                        <li class="news-number mr-3">{{ $item->id }}</li>
+                        {{-- <li class="news-number mr-3">{{ $item->id }}</li> --}}
+                        <li class="news-date mx-5">{{ substr($item->created_at, 0, 10) }}</li>
                         <li class="news-title w-70">
                             {{ $item->title }}
                         </li>
                         <li class="news-msg ml-auto">{{ $item->text }}</li>
-                        <li class="news-date ml-3">{{ substr($item->created_at, 0, 10) }}</li>
                     </ul>
                 </div>
                 <hr />
@@ -118,7 +118,7 @@
                                                             <div class="d-flex align-items-center">
                                                                 <button type="button" class="order-reduce">-</button>
                                                                 <input class="order-input" type="number" name="qty"
-                                                                    value="1">
+                                                                    value="1" id="input{{$item->id}}">
                                                                 <button type="button" class="order-plus">+</button>
                                                             </div>
                                                         </div>
@@ -219,7 +219,7 @@
                                                             <div class="d-flex align-items-center">
                                                                 <button type="button" class="order-reduce">-</button>
                                                                 <input class="order-input" type="number" name="qty"
-                                                                    value="1">
+                                                                    value="1" id="input{{$item->id}}">
                                                                 <button type="button" class="order-plus">+</button>
                                                             </div>
                                                         </div>
@@ -374,23 +374,29 @@
 
     <script>
         function addtocart(product_id) {
-          @if (Auth::check())
-              var formdata = new FormData()
-              formdata.append('_token', ' {{ csrf_token() }}')
-              formdata.append('product_id', product_id)
-          
-              fetch('/addtocart', {
-              method: 'POST',
-              body: formdata
-              })
-              .then(response => response.text())
-              .then(text => {
-              alert(text)
-              });
-              document.querySelector('.id'+product_id+'').click();
-          @else
-              document.location.href="/login";
-          @endif
+            var num = document.querySelector('#input'+product_id+'').value;
+            var orderInputs = document.querySelectorAll('.order-input');
+            @if (Auth::check())
+                var formdata = new FormData()
+                formdata.append('_token', ' {{ csrf_token() }}')
+                formdata.append('product_id', product_id)
+                formdata.append('num', num)
+            
+                fetch('/addtocart', {
+                method: 'POST',
+                body: formdata
+                })
+                .then(response => response.text())
+                .then(text => {
+                alert(text)
+                });
+                orderInputs.forEach(orderInput => {
+                    orderInput.value = 1;
+                });
+                document.querySelector('.id'+product_id+'').click();
+            @else
+                document.location.href="/login";
+            @endif
         }
 
         @if (Session::has('msg'))
