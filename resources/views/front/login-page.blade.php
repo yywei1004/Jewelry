@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="{{ asset('css/login-page.css') }}">
 @endsection
 @section('main')
-    <main class="containers">
-        <div class="container-title d-flex justify-content-between" style="margin-top: 114px">
+    <main class="containers py-5">
+        <div class="container-title d-flex justify-content-between mx-auto" style="margin-top: 114px">
             <div class="container-title-left">歡迎回來!</div>
             <a class="container-title-right" href="{{ route('logout') }}" title="登出"
             onclick="event.preventDefault();
@@ -15,7 +15,7 @@
                 @csrf
             </form>    
         </div>
-        <div class="form-table">
+        <div class="form-table mx-auto">
             <div class="form-title d-flex justify-content-between">
                 <div class="form-title-all form-title-left">訂購紀錄</div>
                 <div class="form-title-all form-title-right">個人資料</div>

@@ -114,7 +114,7 @@ class FrontController extends Controller
         $product = Product::find($request->product_id);
         ShoppingCart::create([
             'product_id' => $product->id,
-            'qty' => 1,
+            'qty' => $request->num,
             'price' => $product->price,
             'user_id' => Auth::user()->id,
         ]);

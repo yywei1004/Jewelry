@@ -448,10 +448,10 @@ a {
   content: '網路獨賣';
 }
 
-#merch .discount .card-deck .row .col-4:nth-child(2) .card::before{
+#merch .discount .card-deck .row .col-4:nth-child(3) .card::before{
   content: '專櫃獨賣';
 }
-#merch .selection .card-deck .row .col-4:nth-child(3) .card::before{
+#merch .selection .card-deck .row .col-4:nth-child(5) .card::before{
   content: '專櫃獨賣';}
 
 #merch .add-cart {
