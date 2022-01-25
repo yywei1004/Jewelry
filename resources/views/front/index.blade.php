@@ -8,14 +8,14 @@
     <!-- parallax區塊 -->
     <section id="parallax">
         <div class="banner" style="background-image: url({{ @$cover[0]->cover_path }});">
-            <div class="caption">
+            {{-- <div class="caption">
                 <h2>獨/特</h2>
                 <h2>因妳而在此誕生</h2>
-            </div>
+            </div> --}}
         </div>
     </section>
     <!-- NEWS區塊 -->
-    <section id="news" class="mb-5">
+    <section id="news">
         <div class="container">
             <div class="deco-line">
                 <img src="./img/裝飾/Banner引導線.png" alt="">
@@ -39,7 +39,7 @@
     <!-- 系列主題 -->
     <section id="theme" class="py-5 mb-5">
         <div class="container-fluid">
-            <h1 class="py-5 my-5 d-flex justify-content-center">系列主題</h1>
+            <h1 class="py-5 d-flex justify-content-center">系列主題</h1>
             <!-- 卡片輪播 -->
             <div class="swiper" id="product-swiper">
                 <div class="swiper-wrapper">
