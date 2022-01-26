@@ -62,7 +62,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
                 <!-- <div class="swiper-button-prev"></div>
-                                                                                <div class="swiper-button-next"></div> -->
+                                                                                                <div class="swiper-button-next"></div> -->
             </div>
         </div>
     </section>
@@ -74,7 +74,7 @@
             <!-- 折扣專區 -->
             <div class="discount">
                 <h2><span>折扣專區</span></h2>
-                <div data-aos="fade-up" data-aos-anchor-placement="center-center">
+                <div data-aos="zoom-out">
                     <div class="card-deck">
                         <div class="row">
                             @foreach ($discount as $item)
@@ -176,13 +176,14 @@
                         </div>
                     @endforeach
                 </div>
+
             </div>
         </div>
         <div class="container-1">
             <!-- 精選商品 -->
             <div class="selection">
                 <h2><span>精選商品</span></h2>
-                <div data-aos="fade-up" data-aos-anchor-placement="center-center">
+                <div data-aos="zoom-out">
                     <div class="card-deck">
                         <div class="row">
                             @foreach ($select as $item)

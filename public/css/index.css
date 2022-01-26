@@ -577,8 +577,9 @@ a {
   margin-left: 32px;
 }
 
-#QNA.card img:hover{
-  background-image: url();
+#QNA .row .col-6 .card img:hover{
+  background-image: url("../img/飾品Q_A/Q_A-3.jpg");
+  background-size: cover;
 }
 
 #QNA .card-2{
