@@ -111,6 +111,9 @@ class NewsController extends Controller
     }
 
     public function imgUploadcover1(Request $request){
+        Cover::create([
+            'cover_path' => '',
+        ]);
         $cover = Cover::find(1);
         FilesController::deleteUpload($cover->cover_path);
         foreach ($request->img as $value) {
