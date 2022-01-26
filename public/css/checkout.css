@@ -133,6 +133,11 @@
           align-items: center;
 }
 
+.order-item-info img{
+  width: 200px;
+  height: 164px;
+}
+
 .order-list .order-item-info .order-list-name {
   width: 300px;
   height: 90px;
@@ -171,13 +176,20 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+          
+}
+
+.order-item-price span{
+  font-size: 25px;
 }
 
 .order-item-price span:nth-child(2) {
+  font-size: 20px;
   color: #EAE8E8;
   text-decoration: line-through;
 }
@@ -212,23 +224,24 @@
   width: 280px;
   margin-top: 20px;
   text-align: left;
-  font-size: 25px;
 }
 
 .order-item-count > span {
   color: #8C8C8B;
+  font-size: 25px;
 }
 
 .order-item-count > div > span {
   letter-spacing: 2px;
   margin-bottom: 15px;
+  font-size: 25px;
 }
 
 .order-item-count > div > span:last-child {
   display: inline-block;
-  width: 90px;
+  width: 120px;
   text-align: left;
-  margin-left: 100px;
+  margin-left: 90px;
 }
 
 .order-item-step {
@@ -408,12 +421,14 @@
   .order-item-qty {
     display: -webkit-box;
     display: -ms-flexbox;
+    padding-left: 25px;
     display: flex;
     margin: 0;
   }
-  .order-item-total {
-    font-size: 30px;
+  .order-item-total > .order-price{
+    font-size: 25px;
   }
+
   .order-item-total::before {
     content: "小計";
   }
@@ -424,6 +439,7 @@
             flex-direction: row;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
+            padding-left: 25px;
             justify-content: flex-start;
     margin: 0 !important;
   }

@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="order-item-number">
                                     <!-- *商品價格 -->
-                                    <div class="ml-2 order-item-price">
+                                    <div class="order-item-price">
                                         <span>NT$
                                             <span>{{ $item->price }}</span>
                                         </span>

@@ -1,5 +1,5 @@
 .modal-dialog {
-  max-width: 800px;
+  max-width: 950px;
 }
 
 .modal-content {
@@ -44,9 +44,8 @@
 }
 
 .row .product-img img {
-  width: 330px;
-  height: 320px;
   padding: 0;
+  margin-right: 22px;
 }
 
 .row .product-info {
