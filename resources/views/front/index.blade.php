@@ -16,11 +16,11 @@
     </section>
     <!-- NEWS區塊 -->
     <section id="news">
-        <div class="container">
+        <div class="container-1">
             <div class="deco-line">
                 <img src="./img/裝飾/Banner引導線.png" alt="">
             </div>
-            <h1 class="py-5 d-flex justify-content-center">News</h1>
+            <h1 class="d-flex justify-content-center">News</h1>
             @foreach ($news as $item)
                 <div class="col">
                     <ul class="news-update">
@@ -37,9 +37,9 @@
         </div>
     </section>
     <!-- 系列主題 -->
-    <section id="theme" class="py-5 mb-5">
+    <section id="theme">
         <div class="container-fluid">
-            <h1 class="py-5 d-flex justify-content-center">系列主題</h1>
+            <h1 class="d-flex justify-content-center">系列主題</h1>
             <!-- 卡片輪播 -->
             <div class="swiper" id="product-swiper">
                 <div class="swiper-wrapper">
@@ -60,18 +60,18 @@
                 </div>
                 <div class="swiper-pagination"></div>
                 <!-- <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div> -->
+                                                <div class="swiper-button-next"></div> -->
             </div>
         </div>
     </section>
     <!-- 商品專區 -->
-    <section id="merch" class="py-5 my-5">
-        <div class="container">
-            <h1 class="py-5 mt-5 d-flex justify-content-center">商品專區</h1>
-            <!-- scrollspy -->
+    <section id="merch">
+        <h1 class="d-flex justify-content-center">商品專區</h1>
+        <!-- scrollspy -->
+        <div class="container-1">
             <!-- 折扣專區 -->
             <div class="discount">
-                <h2 class="py-5 mt-5"><span>折扣專區</span></h2>
+                <h2><span>折扣專區</span></h2>
                 <div class="card-deck">
                     <div class="row">
                         @foreach ($discount as $item)
@@ -118,7 +118,7 @@
                                                             <div class="d-flex align-items-center">
                                                                 <button type="button" class="order-reduce">-</button>
                                                                 <input class="order-input" type="number" name="qty"
-                                                                    value="1" id="input{{$item->id}}">
+                                                                    value="1" id="input{{ $item->id }}">
                                                                 <button type="button" class="order-plus">+</button>
                                                             </div>
                                                         </div>
@@ -145,9 +145,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container-2">
             <!-- 最新商品 -->
             <div class="latest">
-                <h2 class="py-5 mt-5"><span>最新商品</span></h2>
+                <h2><span>最新商品</span></h2>
                 <div class="row">
                     <div class="col-12">
                         <img class="fullscr" src="{{ @$cover[1]->cover_path }}" alt="">
@@ -170,6 +172,8 @@
                     @endforeach
                 </div>
             </div>
+        </div>
+        <div class="container-1">
             <!-- 精選商品 -->
             <div class="selection">
                 <h2 class="py-5 mt-5"><span>精選商品</span></h2>
@@ -219,7 +223,7 @@
                                                             <div class="d-flex align-items-center">
                                                                 <button type="button" class="order-reduce">-</button>
                                                                 <input class="order-input" type="number" name="qty"
-                                                                    value="1" id="input{{$item->id}}">
+                                                                    value="1" id="input{{ $item->id }}">
                                                                 <button type="button" class="order-plus">+</button>
                                                             </div>
                                                         </div>
@@ -246,6 +250,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container-2">
             <!-- 客製專區 -->
             <div class="custom">
                 <h2 class="py-5 mt-5"><span>客製專區</span></h2>
@@ -280,10 +286,11 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <!-- 品牌門市 -->
-    <section id="brand-store" class="py-5 mb-5">
-        <div class="container">
+    <section id="brand-store">
+        <div class="container-3">
             <div class="brand-story d-flex">
                 <div class="story-text">
                     <h1>品牌故事</h1>
@@ -306,8 +313,8 @@
         </div>
     </section>
     <!-- 飾品Q&A -->
-    <section id="QNA" class="py-5">
-        <div class="container">
+    <section id="QNA">
+        <div class="container-4">
             <h1 class="py-5 mb-5 d-flex justify-content-center">飾品Q&A</h1>
             <div class="row">
                 <div class="col-6">
@@ -374,7 +381,7 @@
 
     <script>
         function addtocart(product_id) {
-            var num = document.querySelector('#input'+product_id+'').value;
+            var num = document.querySelector('#input' + product_id + '').value;
             var orderInputs = document.querySelectorAll('.order-input');
             @if (Auth::check())
                 var formdata = new FormData()
@@ -391,7 +398,7 @@
                 alert(text)
                 });
                 orderInputs.forEach(orderInput => {
-                    orderInput.value = 1;
+                orderInput.value = 1;
                 });
                 document.querySelector('.id'+product_id+'').click();
             @else

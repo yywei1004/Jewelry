@@ -263,15 +263,46 @@ main {
   /* 固定背景 */
   /* background-attachment: fixed; */
 }
+
+#news , #theme , #merch, #brand-store ,#QNA {
+  margin-top: 240px;
+}
+
+.container-fluid > h1{
+  padding-bottom: 100px;
+  margin: 0;
+}
+
+.container-1{
+  padding: 0 315px;
+}
+
+.container-2{
+  padding: 0 210px;
+}
+
+.container-3{
+  padding: 0 380px;
+}
+
+.container-4{
+  padding: 0 148px;
+}
+
+
 h1 {
   font-size: 48px;
   color: #ad7d47;
   font-weight: normal;
+  padding-bottom: 57px;
+  margin: 0;
 }
+
 h2 {
   font-size: 30px;
   font-weight: normal;
 }
+
 h3 {
   font-size: 25px;
   font-weight: normal;
@@ -284,17 +315,16 @@ p {
 .card-body {
   padding: 10px 20px 20px 0;
 }
+
 /* News區塊 */
-#news {
-  margin: 249px 0 217px 0;
-}
-#news .container {
+#news .container-1 {
   position: relative;
 }
+
 /* 中央裝飾線 */
 #news .deco-line {
   position: absolute;
-  top: -70%;
+  top: -90%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
@@ -302,6 +332,9 @@ p {
 /* 大標 */
 .news-title{
   margin: 0;
+  letter-spacing: 1px;
+  color: #c99733d0;
+  
 }
 
 #news .col .news-update {
@@ -397,14 +430,18 @@ a {
 }
 
 /* 商品專區 */
-#merch h2 {
+#merch  h2 {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #ad7d47;
   position: relative;
   z-index: 1;
+  margin-bottom: 18px !important;
+  margin-top: 50px !important;
+
 }
+
 /* 偽元素裝飾線 */
 #merch h2::before {
   content: "";
@@ -430,6 +467,12 @@ a {
   font-size: 30px;
   background-color: #fff9f9;
 }
+
+#merch .col-4{
+  padding: 0;
+}
+
+
 #merch p {
   color: #ad7d47;
 }
@@ -457,8 +500,6 @@ a {
   z-index: 1;
   top: 5%;
   left: -2%;
-  width: 95px;
-  height: 30px;
   background-color: #ad7d47;
   color: #fff;
   display: flex;
@@ -468,26 +509,42 @@ a {
 
 #merch .discount .card-deck .row .col-4:nth-child(1) .card::before{
   content: '網路獨賣';
+  font-size: 20px;
+  padding: 5px 20px;
+  letter-spacing: 1.2px;
+  font-weight: lighter;
 }
+
 #merch .selection .card-deck .row .col-4:nth-child(1) .card::before{
   content: '網路獨賣';
+  font-size: 20px;
+  padding: 5px 20px;
+  letter-spacing: 1.2px;
+  font-weight: lighter;
 }
 
 #merch .discount .card-deck .row .col-4:nth-child(3) .card::before{
   content: '專櫃獨賣';
+  font-size: 20px;
+  padding: 5px 20px;
+  letter-spacing: 1.2px;
+  font-weight: lighter;
 }
 #merch .selection .card-deck .row .col-4:nth-child(5) .card::before{
-  content: '專櫃獨賣';}
+  content: '專櫃獨賣';
+  font-size: 20px;
+  padding: 5px 20px;
+  letter-spacing: 1.2x;
+  font-weight: lighter;
+}
 
 #merch .add-cart {
   position: absolute;
   bottom: 29%;
   right: 0;
-
-  width: 140px;
-  height: 50px;
+  padding: 20px 28px;
   background-color: #b0b0b0;
-  font-size: 20px;
+  font-size: 25px;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -507,11 +564,11 @@ a {
   margin-bottom: 30px;
 }
 #merch .latest p {
-  font-size: 16px;
+  font-size: 20px;
 }
 /* 客製專區 */
 #merch .custom p {
-  font-size: 16px;
+  font-size: 20px;
 }
 /* 飾品Q&A */
 #QNA a {
@@ -538,6 +595,10 @@ footer img {
 footer .form-title {
   margin-top: 32px;
   padding: 0 25px;
+}
+
+footer >　.form-control {
+  background-color:#ffffff7e;
 }
 
 /* 送出按鈕位移 */
@@ -596,7 +657,7 @@ span {
 
 /* 定位 */
 
-#brand-store .container {
+#brand-store .container-3 {
   position: relative;
   height: 1104px;
 }

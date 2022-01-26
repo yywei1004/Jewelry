@@ -94,7 +94,7 @@
       @yield('main')
     </main>
     <footer class="pt-5">
-      <div class="container">
+      <div class="container-1">
         <div class="row">
           <div class="col-8">
             <div class="row">
