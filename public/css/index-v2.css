@@ -9,11 +9,11 @@ html {
 .header {
   position: fixed;
   width: 100%;
-  height: 145px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #fff4ef;
+  padding: 0 25px;
   transition: 0.3s;
   z-index: 2;
 }
@@ -23,9 +23,8 @@ html {
 }
 .logo a img {
   display: block;
-  width: 173px;
+  width: 165px;
   padding: 20px 0;
-  margin: 0 10px 0 40px;
 }
 
 .navigation {
@@ -44,7 +43,7 @@ html {
   padding-inline-start: 0;
 }
 /* 隱藏logo */
-.menu .logo-hidden a img{
+.menu .logo-hidden a img {
   width: 165px;
   display: none;
   padding: 20px 0;
@@ -54,15 +53,13 @@ html {
   list-style-type: none;
 }
 .menu li a {
-  color: #ad7d47a8;
+  color: #ad7d47c9;
   text-decoration: none;
   display: block;
-  padding: 68px 0 20px 40px;
-  font-size: 24px;
+  padding: 60px 25px 20px;
+  font-size: 18px;
   line-height: 1;
   transition: 0.3s;
-  letter-spacing: 3px;
-  line-height:32.69px;
 }
 .menu li .hidden {
   display: none;
@@ -143,14 +140,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: absolute;
-  top: 58%;
+  top: 50%;
   right: 2%;
-  transform: translateY(-50%);
 }
 .icon .icon-item i {
   color: #daa95d;
-  font-size: 33px;
   padding: 0 10px;
 }
 
@@ -178,13 +174,13 @@ html {
     height: 100%;
     padding: 10px 0;
   }
- /* 顯示隱藏logo */
- .menu .logo-hidden a img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
+  /* 顯示隱藏logo */
+  .menu .logo-hidden a img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
   /* 顯示隱藏項目 */
   .menu li .hidden {
     display: flex;
@@ -193,7 +189,7 @@ html {
   .menu .social-icon {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     margin-top: 300px;
   }
   .menu .social-icon a {
@@ -243,7 +239,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+  background-image: url(../img/BN1.jpg);
   width: 100%;
   height: 100vh;
 }
@@ -263,46 +259,15 @@ main {
   /* 固定背景 */
   /* background-attachment: fixed; */
 }
-
-#news , #theme , #merch, #brand-store ,#QNA {
-  margin-top: 240px;
-}
-
-.container-fluid > h1{
-  padding-bottom: 100px;
-  margin: 0;
-}
-
-.container-1{
-  padding: 0 315px;
-}
-
-.container-2{
-  padding: 0 210px;
-}
-
-.container-3{
-  padding: 0 380px;
-}
-
-.container-4{
-  padding: 0 148px;
-}
-
-
 h1 {
   font-size: 48px;
   color: #ad7d47;
   font-weight: normal;
-  padding-bottom: 57px;
-  margin: 0;
 }
-
 h2 {
   font-size: 30px;
   font-weight: normal;
 }
-
 h3 {
   font-size: 25px;
   font-weight: normal;
@@ -315,26 +280,18 @@ p {
 .card-body {
   padding: 10px 20px 20px 0;
 }
-
 /* News區塊 */
-#news .container-1 {
+#news {
+  padding: 192px 0 48px;
+}
+#news .container {
   position: relative;
 }
-
 /* 中央裝飾線 */
 #news .deco-line {
   position: absolute;
-  top: -90%;
+  top: -70%;
   left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-/* 大標 */
-.news-title{
-  margin: 0;
-  letter-spacing: 1px;
-  color: #c99733d0;
-  
 }
 
 #news .col .news-update {
@@ -361,24 +318,13 @@ p {
 /* 全部卡片透明背景 */
 .card {
   background: transparent;
-  /* display: flex;
-  flex-direction: column-reverse; */
 }
 /* 系列主題 */
 #product-swiper .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 5px;
+  height: 5px;
   background-color: #5c5c5c;
 }
-
-.swiper-pagination{
-  bottom:-73px !important;
-}
-
-.swiper{
-  overflow: visible;
-}
-
 .swiper h2 {
   color: #ad7d47;
 }
@@ -418,30 +364,20 @@ a {
   }
 }
 
-/* swiper圖片 */
-.swiper-slide{
-  width: 360px !important;
-
-}
-
 /* 卡片上下顛倒 */
 #product-swiper .swiper-slide:nth-child(odd) > .card {
   flex-direction: column-reverse;
 }
 
 /* 商品專區 */
-#merch  h2 {
+#merch h2 {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #ad7d47;
   position: relative;
   z-index: 1;
-  margin-bottom: 18px !important;
-  margin-top: 50px !important;
-
 }
-
 /* 偽元素裝飾線 */
 #merch h2::before {
   content: "";
@@ -467,12 +403,6 @@ a {
   font-size: 30px;
   background-color: #fff9f9;
 }
-
-#merch .col-4{
-  padding: 0;
-}
-
-
 #merch p {
   color: #ad7d47;
 }
@@ -495,62 +425,33 @@ a {
   position: relative;
 }
 
-#merch .card-deck .row .card::before{
+#merch .exclusive {
   position: absolute;
-  z-index: 1;
   top: 5%;
   left: -2%;
+
+  width: 95px;
+  height: 30px;
   background-color: #ad7d47;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-#merch .discount .card-deck .row .col-4:nth-child(1) .card::before{
-  content: '網路獨賣';
-  font-size: 20px;
-  padding: 5px 20px;
-  letter-spacing: 1.2px;
-  font-weight: lighter;
-}
-
-#merch .selection .card-deck .row .col-4:nth-child(1) .card::before{
-  content: '網路獨賣';
-  font-size: 20px;
-  padding: 5px 20px;
-  letter-spacing: 1.2px;
-  font-weight: lighter;
-}
-
-#merch .discount .card-deck .row .col-4:nth-child(3) .card::before{
-  content: '專櫃獨賣';
-  font-size: 20px;
-  padding: 5px 20px;
-  letter-spacing: 1.2px;
-  font-weight: lighter;
-}
-#merch .selection .card-deck .row .col-4:nth-child(5) .card::before{
-  content: '專櫃獨賣';
-  font-size: 20px;
-  padding: 5px 20px;
-  letter-spacing: 1.2x;
-  font-weight: lighter;
-}
-
 #merch .add-cart {
   position: absolute;
   bottom: 29%;
   right: 0;
-  padding: 20px 28px;
+
+  width: 140px;
+  height: 50px;
   background-color: #b0b0b0;
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  cursor: pointer;
 }
 #merch .add-cart:hover {
   background-color: #fea8a3;
@@ -564,11 +465,11 @@ a {
   margin-bottom: 30px;
 }
 #merch .latest p {
-  font-size: 20px;
+  font-size: 16px;
 }
 /* 客製專區 */
 #merch .custom p {
-  font-size: 20px;
+  font-size: 16px;
 }
 /* 飾品Q&A */
 #QNA a {
@@ -576,33 +477,6 @@ a {
   font-size: 32px;
   margin-left: 32px;
 }
-
-#QNA.card img:hover{
-  background-image: url();
-}
-
-#QNA .card-2{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #fff1e9ab;
-}
-
-#QNA h3{
-  color: #AD7D47;
-  margin-bottom: 28px;
-}
-
-#QNA .card-2 > span{
-  width: 173px;
-  font-size: 20px;
-  color: #00000055;
-}
-
 /* footer */
 footer {
   background-color: #ffe1cc;
@@ -624,34 +498,24 @@ footer .form-title {
   padding: 0 25px;
 }
 
-.form-control {
-  background-color:#ffffff7e;
-  border: 0;
-}
-
 /* 送出按鈕位移 */
 footer form {
   position: relative;
-}
-
-.fa-envelope-open-text{
-  font-size: 28px;
-  padding-right: 14px;
 }
 
 footer .form-btn {
   position: absolute;
   top: 92%;
   right: 0;
-  padding: 12px 34px;
+
+  width: 110px;
+  height: 40px;
   background-color: #b0b0b0;
-  letter-spacing: 2px;
   font-size: 20px;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px transparent;
 }
 footer .form-btn:hover {
   background-color: #fea8a3;
@@ -667,8 +531,7 @@ footer .copyright {
   padding: 24px;
 }
 span {
-  font-size: 20px;
-  letter-spacing: 1px;
+  font-size: 16px;
 }
 
 /* 品牌門市 */
@@ -690,7 +553,7 @@ span {
 
 /* 定位 */
 
-#brand-store .container-3 {
+#brand-store .container {
   position: relative;
   height: 1104px;
 }
@@ -715,16 +578,177 @@ span {
   position: absolute;
   right: 0;
   bottom: 77px;
-  transform: translateX(-63%);
   width: 600px;
   height: 350px;
   z-index: 1;
 }
 #brand-store .store-h1 {
   margin: 0 0 30px 35px;
-  color: #AD7D47;
-  font-size: 48px;
 }
 #brand-store li {
   margin-bottom: 20px;
+}
+
+/* RWD */
+@media screen and (max-width: 1200px) {
+  #parallax .caption {
+    position: absolute;
+    bottom: 100px;
+    right: -20px;
+    color: #ad7d47;
+    letter-spacing: 32px;
+  }
+
+  #news .col .news-update .news-date {
+    margin-left: auto !important;
+  }
+  #news .col .news-update .news-msg {
+    display: none;
+  }
+
+  #merch .add-cart {
+    position: absolute;
+    bottom: 39%;
+    right: 0;
+  
+    width: 140px;
+    height: 50px;
+    background-color: #b0b0b0;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  footer .form-title {
+    margin-top: 32px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #news .deco-line {
+    position: absolute;
+    top: -90%;
+    left: 50%;
+  }
+
+  #parallax .caption {
+    position: absolute;
+    bottom: 100px;
+    right: -20px;
+    color: #ad7d47;
+    letter-spacing: 32px;
+  }
+
+  #news .col .news-update {
+    padding: 0;
+  }
+
+  #news .col .news-update .news-number {
+    display: none;
+  }
+  #news .col .news-update .news-title {
+    font-size: 28px;
+  }
+
+  #merch .exclusive {
+    position: absolute;
+    top: 5%;
+    left: -2%;
+  
+    width: 65px;
+    height: 20px;
+    font-size: 14px;
+    background-color: #ad7d47;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #merch .add-cart {
+    position: absolute;
+    bottom: 48%;
+    right: 0;
+  
+    width: 95px;
+    height: 35px;
+    background-color: #b0b0b0;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  footer .form-name {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #news .deco-line {
+    position: absolute;
+    top: -90%;
+    left: 50%;
+  }
+
+  #parallax .caption {
+    position: absolute;
+    bottom: 100px;
+    right: -20px;
+    color: #ad7d47;
+    letter-spacing: 32px;
+  }
+
+  #news .col .news-update {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  #news .col .news-update .news-title {
+    font-size: 20px;
+  }
+  #news .col .news-update .news-date {
+    margin-left: 0 !important;
+    padding-right: 20px;
+    font-size: 16px;
+  }
+  #QNA .contact {
+    display: flex;
+    justify-content: center !important;
+  }
+  footer .form-name {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #news .deco-line {
+    position: absolute;
+    top: -90%;
+    left: 50%;
+  }
+
+  footer h3 {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  footer p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer h3 {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  footer p {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
 }

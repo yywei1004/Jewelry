@@ -93,6 +93,11 @@
   color: #8C8C8B;
 }
 
+.form-control{
+  border: 1px solid #8c8c8b6b;
+  border-radius: 6px;
+}
+
 .order-items-number,
 .order-item-number {
   width: 570px;
@@ -425,7 +430,8 @@
     display: flex;
     margin: 0;
   }
-  .order-item-total > .order-price{
+  .order-item-total 
+  > .order-price{
     font-size: 25px;
   }
 
