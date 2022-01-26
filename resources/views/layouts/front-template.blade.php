@@ -150,9 +150,7 @@
                     <textarea class="form-control" id="desc" name="desc" rows="3" required></textarea>
                   </div>               
                   <button class="form-btn" type="submit" >
-                    <div class="send-icon">
-                      <i class="fas fa-envelope-open-text"></i>
-                    </div>
+                    <div class="fas fa-envelope-open-text"></div>
                     <span class="ml-2">送出</span>
                   </button>
                 </form>

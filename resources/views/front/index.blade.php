@@ -176,7 +176,7 @@
         <div class="container-1">
             <!-- 精選商品 -->
             <div class="selection">
-                <h2 class="py-5 mt-5"><span>精選商品</span></h2>
+                <h2><span>精選商品</span></h2>
                 <div class="card-deck">
                     <div class="row">
                         @foreach ($select as $item)
@@ -254,7 +254,7 @@
         <div class="container-2">
             <!-- 客製專區 -->
             <div class="custom">
-                <h2 class="py-5 mt-5"><span>客製專區</span></h2>
+                <h2><span>客製專區</span></h2>
                 <div class="row">
                     <div class="col-6">
                         <div class="row">
@@ -302,7 +302,7 @@
             <div class="store-location d-flex">
                 <img class="store-scene" src="./img/關於我們/門市據點-1.jpg" alt="">
                 <div class="store-text">
-                    <h1 class="store-h1">門市據點</h1>
+                    <div class="store-h1">門市據點</div>
                     <ul>
                         <li>京站B1 飾空間</li>
                         <li>信義誠品 風尚空間：信義誠品4樓</li>
@@ -325,13 +325,15 @@
                             </div>
                         </div>
                         <div class="col-6 mb-4">
-                            <div class="card border-0">
-                                <img src="./img/飾品Q_A/Q_A-PK.jpg" alt="">
+                            <div class="card-2 border-0">
+                                <h3>如何保養銀飾品</h3>
+                                <span>避免接觸以下環境溫泉/汗水/游泳</span>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="card border-0">
-                                <img src="./img/飾品Q_A/Q_A-PK.jpg" alt="">
+                            <div class="card-2 border-0">
+                                <h3>如何保養銀飾品</h3>
+                                <span>避免接觸以下環境溫泉/汗水/游泳</span>
                             </div>
                         </div>
                         <div class="col-6">
@@ -349,13 +351,15 @@
                             </div>
                         </div>
                         <div class="col-6 mb-4">
-                            <div class="card border-0">
-                                <img src="./img/飾品Q_A/Q_A-PK.jpg" alt="">
+                            <div class="card-2  border-0">
+                                <h3>如何保養銀飾品</h3>
+                                <span>避免接觸以下環境溫泉/汗水/游泳</span>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="card border-0">
-                                <img src="./img/飾品Q_A/Q_A-PK.jpg" alt="">
+                            <div class="card-2  border-0">
+                                <h3>如何保養銀飾品</h3>
+                                <span>避免接觸以下環境溫泉/汗水/游泳</span>
                             </div>
                         </div>
                         <div class="col-6">
