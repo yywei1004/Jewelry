@@ -1,5 +1,9 @@
 @extends('layouts.backstage-template')
 @section('title','訂單管理')
+@section('css')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+@endsection
+
 @section('main')
     <br>
     <div class="container">
@@ -99,6 +103,8 @@
 @endsection
 
 @section('js')
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    
     <script>
         $(document).ready(function() {
             $('#order_table').DataTable();
