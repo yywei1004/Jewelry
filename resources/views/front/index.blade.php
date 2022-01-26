@@ -1,10 +1,25 @@
 @extends('layouts.front-template')
 @section('title', 'ISHA_獨特，因妳而存在')
 @section('css')
-    <!-- index-modal css -->
+    <!-- index-modal CSS -->
     <link rel="stylesheet" href="./css/index-modal.css">
+    <!-- loading CSS -->
+    <link rel="stylesheet" href="{{asset('css/loading.css')}}">
 @endsection
 @section('main')
+    <div class="prev">
+        <div class="containers">
+            <div class="loading d-flex" >
+                <div class="logo">
+                    <img src="{{asset('img/LOGO.svg')}}" alt="">
+                </div>
+                <div class="line my-3"></div>
+                <div class="text">獨特 · 因妳而在此誕生
+                <div class="mask"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- parallax區塊 -->
     <section id="parallax">
         <div class="banner" style="background-image: url({{ @$cover[0]->cover_path }});">
@@ -382,7 +397,10 @@
 @section('js')
     <!-- index-modal-qty JS -->
     <script src="./js/index-modal-qty.js"></script>
-
+    <!-- loading JS -->
+    <script>
+        document.querySelector('.mask').classList.add('act');
+    </script>
     <script>
         function addtocart(product_id) {
             var num = document.querySelector('#input' + product_id + '').value;

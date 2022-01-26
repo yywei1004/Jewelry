@@ -18,7 +18,7 @@
     <div class="containers">
         <div class="loading d-flex" >
             <div class="logo">
-                <img src="./image/LOGO.svg" alt="">
+                <img src="{{asset('img/LOGO.svg')}}" alt="">
             </div>
             <div class="line my-3"></div>
             <div class="text">獨特 · 因妳而在此誕生

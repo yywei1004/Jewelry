@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 //測試看畫面
 Route::get('/test', function () {
-    return view('front.index-modal');
+    return view('front.loading');
 });
 
 //前台 不須登入
