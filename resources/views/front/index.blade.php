@@ -325,11 +325,11 @@
                     <h3>"ISHA"，古希伯來文中『女性』的意思，"ISHA"代表的是美麗、柔和與獨一無二的創造。</h3>
                     <h3>而象形文字中的『女』，則象徵「獨特生命的孕育」「Isha Jewelry純銀輕珠寶」就是這樣一個為了襯托每一位女性獨特之美而誕生的品牌。</h3>
                 </div>
-                <div data-aos="fade-left">
+                <div data-aos="fade-left" class="portrait-img">
                     <img class="portrait" src="./img/關於我們/品牌故事.jpg" alt="">
                 </div>
             </div>
-            <div class="store-location d-flex">
+            <div class="store-location d-flex flex-column">
                 <img class="store-scene" src="./img/關於我們/門市據點-1.jpg" alt="">
                 <div class="store-text">
                     <div data-aos="fade-right">
