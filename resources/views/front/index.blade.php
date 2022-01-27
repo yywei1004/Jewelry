@@ -30,13 +30,14 @@
         </div>
     </section>
     <!-- NEWS區塊 -->
+    <div id="news-Anchor" style="width: 100%; height: 145px;"></div>
     <section id="news">
         <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
             <div class="container-1">
                 <div class="deco-line">
                     <img src="./img/裝飾/Banner引導線.png" alt="">
                 </div>
-                <h1 class="d-flex justify-content-center">News</h1>
+                <h1 class="d-flex justify-content-center">最新消息</h1>
                 @foreach ($news as $item)
                     <div class="col">
                         <ul class="news-update">
@@ -54,6 +55,7 @@
         </div>
     </section>
     <!-- 系列主題 -->
+    <div id="theme-Anchor" style="width: 100%; height: 145px;"></div>
     <section id="theme">
         <div class="container-fluid">
             <h1 class="d-flex justify-content-center">系列主題</h1>
@@ -82,6 +84,7 @@
         </div>
     </section>
     <!-- 商品專區 -->
+    <div id="merch-Anchor" style="width: 100%; height: 145px;"></div>
     <section id="merch">
         <h1 class="d-flex justify-content-center">商品專區</h1>
         <!-- scrollspy -->
@@ -340,6 +343,7 @@
     </div>
 
     <!-- 品牌門市 -->
+    <div id="brand-store-Anchor" style="width: 100%; height: 145px;"></div>
     <section id="brand-store">
         <div class="container-3">
             <div class="brand-story d-flex">
@@ -368,6 +372,7 @@
         </div>
     </section>
     <!-- 飾品Q&A -->
+    <div id="QNA-Anchor" style="width: 100%; height: 145px;"></div>
     <section id="QNA">
         <div class="container-4">
             <h1 class="py-5 mb-5 d-flex justify-content-center">飾品Q&A</h1>
@@ -427,6 +432,7 @@
             </div>
         </div>
     </section>
+    <div id="contact-Anchor" style="width: 100%; height: 145px;"></div>
     <section id="contact">
         <div class="container-4 d-flex justify-content-end">
             <a href="" class="fas fa-phone-alt"></a>
