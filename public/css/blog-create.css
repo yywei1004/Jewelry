@@ -1,6 +1,7 @@
 form {
   width: 100%;
-  background-color: lightblue;
+  background-color: #fff4ef;
+  margin: 50px auto;
   padding: 50px;
 }
 
@@ -9,6 +10,10 @@ form .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+form .row label{
+  margin-right: 20px;
 }
 
 form .row.custom {
