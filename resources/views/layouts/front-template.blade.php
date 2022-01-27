@@ -38,9 +38,9 @@
                 <li><a href="#news-Anchor">最新消息</a></li>
                 <li><a href="#theme-Anchor">系列主題</a></li>
                 <li><a href="#merch-Anchor">商品專區</a></li>
-                <li><a class="hidden" href="">關於我們</a></li>
-                <li><a class="hidden" href="">飾品Q&A</a></li>
-                <li><a class="hidden" href="">聯絡我們</a></li>
+                <li><a class="hidden" href="#brand-store-Anchor">關於我們</a></li>
+                <li><a class="hidden" href="#QNA-Anchor">飾品Q&A</a></li>
+                <li><a class="hidden" href="#contact-Anchor">聯絡我們</a></li>
                 <div class="social-icon">
                     <a href=""><i class="fas fa-phone-alt"></i></a>
                     <a href=""><i class="fab fa-instagram"></i></a>

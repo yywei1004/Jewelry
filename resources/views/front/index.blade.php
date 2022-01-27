@@ -79,7 +79,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
                 <!-- <div class="swiper-button-prev"></div>
-                                                                                                                        <div class="swiper-button-next"></div> -->
+                    <div class="swiper-button-next"></div> -->
             </div>
         </div>
     </section>
@@ -92,11 +92,11 @@
             <!-- 折扣專區 -->
             <div class="discount">
                 <h2><span>折扣專區</span></h2>
-                <div data-aos="zoom-out">
-                    <div class="card-deck">
-                        <div class="row">
-                            @foreach ($discount as $item)
-                                <div class="col-4">
+                <div class="card-deck">
+                    <div class="row">
+                        @foreach ($discount as $item)
+                            <div class="col-4">
+                                <div data-aos="zoom-out">
                                     <div class="card border-0">
                                         <img src="{{ @$item->imgs[0]->image_path }}" class="card-img-top w-100"
                                             alt="..." />
@@ -111,51 +111,51 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal fade" id="shopping-show{{ $item->id }}" tabindex="-1"
-                                    role="dialog" aria-labelledby="shopping-cartsLable" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close id{{ $item->id }}"
-                                                    data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="product-img col-6 d-flex">
-                                                            <img src="{{ @$item->imgs[0]->image_path }}" alt="">
+                            </div>
+                            <div class="modal fade" id="shopping-show{{ $item->id }}" tabindex="-1" role="dialog"
+                                aria-labelledby="shopping-cartsLable" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close id{{ $item->id }}" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="product-img col-6 d-flex">
+                                                        <img src="{{ @$item->imgs[0]->image_path }}" alt="">
+                                                    </div>
+                                                    <div class="product-info col-6 d-flex">
+                                                        <div class="product-title">
+                                                            {{ $item->name }}
                                                         </div>
-                                                        <div class="product-info col-6 d-flex">
-                                                            <div class="product-title">
-                                                                {{ $item->name }}
+                                                        <div class="product-price d-flex">
+                                                            <span>NT${{ $item->price }}</span>
+                                                            <span>NT${{ $item->original_price }}</span>
+                                                        </div>
+                                                        <div class="product-qty d-flex">
+                                                            <label for="qty">數量 : </label>
+                                                            <div class="d-flex align-items-center">
+                                                                <button type="button" class="order-reduce">-</button>
+                                                                <input class="order-input" type="number" name="qty"
+                                                                    value="1" id="input{{ $item->id }}">
+                                                                <button type="button" class="order-plus">+</button>
                                                             </div>
-                                                            <div class="product-price d-flex">
-                                                                <span>NT${{ $item->price }}</span>
-                                                                <span>NT${{ $item->original_price }}</span>
-                                                            </div>
-                                                            <div class="product-qty d-flex">
-                                                                <label for="qty">數量 : </label>
-                                                                <div class="d-flex align-items-center">
-                                                                    <button type="button" class="order-reduce">-</button>
-                                                                    <input class="order-input" type="number" name="qty"
-                                                                        value="1" id="input{{ $item->id }}">
-                                                                    <button type="button" class="order-plus">+</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <button type="button" class="btn"
-                                                                    onclick="addtocart({{ $item->id }})">加入購物車</button>
-                                                                <button type="button" class="btn">立即購買</button>
-                                                            </div>
-                                                            <div class="product-storage">
-                                                                <span class="product-remain">目前庫存剩下 :
-                                                                    <span
-                                                                        class="product-remaincount">{{ $item->qty }}</span>
-                                                                    <span>件</span>
-                                                                </span>
-                                                            </div>
+                                                        </div>
+                                                        <div class="product-button">
+                                                            <button type="button" class="btn"
+                                                                onclick="addtocart({{ $item->id }})">加入購物車</button>
+                                                            <button type="button" class="btn">立即購買</button>
+                                                        </div>
+                                                        <div class="product-storage">
+                                                            <span class="product-remain">目前庫存剩下 :
+                                                                <span
+                                                                    class="product-remaincount">{{ $item->qty }}</span>
+                                                                <span>件</span>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -163,8 +163,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
-                        </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -201,11 +201,11 @@
             <!-- 精選商品 -->
             <div class="selection">
                 <h2><span>精選商品</span></h2>
-                <div data-aos="zoom-out">
-                    <div class="card-deck">
-                        <div class="row">
-                            @foreach ($select as $item)
-                                <div class="col-4">
+                <div class="card-deck">
+                    <div class="row">
+                        @foreach ($select as $item)
+                            <div class="col-4">
+                                <div data-aos="zoom-out">
                                     <div class="card border-0">
                                         <img src="{{ @$item->imgs[0]->image_path }}" class="card-img-top w-100"
                                             alt="..." />
@@ -220,51 +220,51 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal fade" id="shopping-show{{ $item->id }}" tabindex="-1"
-                                    role="dialog" aria-labelledby="shopping-cartsLable" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close id{{ $item->id }}"
-                                                    data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="product-img col-6 d-flex">
-                                                            <img src="{{ @$item->imgs[0]->image_path }}" alt="">
+                            </div>
+                            <div class="modal fade" id="shopping-show{{ $item->id }}" tabindex="-1" role="dialog"
+                                aria-labelledby="shopping-cartsLable" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close id{{ $item->id }}" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="product-img col-6 d-flex">
+                                                        <img src="{{ @$item->imgs[0]->image_path }}" alt="">
+                                                    </div>
+                                                    <div class="product-info col-6 d-flex">
+                                                        <div class="product-title">
+                                                            {{ $item->name }}
                                                         </div>
-                                                        <div class="product-info col-6 d-flex">
-                                                            <div class="product-title">
-                                                                {{ $item->name }}
+                                                        <div class="product-price d-flex">
+                                                            <span>NT${{ $item->price }}</span>
+                                                            <span>NT${{ $item->original_price }}</span>
+                                                        </div>
+                                                        <div class="product-qty d-flex">
+                                                            <label for="qty">數量 : </label>
+                                                            <div class="d-flex align-items-center">
+                                                                <button type="button" class="order-reduce">-</button>
+                                                                <input class="order-input" type="number" name="qty"
+                                                                    value="1" id="input{{ $item->id }}">
+                                                                <button type="button" class="order-plus">+</button>
                                                             </div>
-                                                            <div class="product-price d-flex">
-                                                                <span>NT${{ $item->price }}</span>
-                                                                <span>NT${{ $item->original_price }}</span>
-                                                            </div>
-                                                            <div class="product-qty d-flex">
-                                                                <label for="qty">數量 : </label>
-                                                                <div class="d-flex align-items-center">
-                                                                    <button type="button" class="order-reduce">-</button>
-                                                                    <input class="order-input" type="number" name="qty"
-                                                                        value="1" id="input{{ $item->id }}">
-                                                                    <button type="button" class="order-plus">+</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <button type="button" class="btn"
-                                                                    onclick="addtocart({{ $item->id }})">加入購物車</button>
-                                                                <button type="button" class="btn">立即購買</button>
-                                                            </div>
-                                                            <div class="product-storage">
-                                                                <span class="product-remain">目前庫存剩下 :
-                                                                    <span
-                                                                        class="product-remaincount">{{ $item->qty }}</span>
-                                                                    <span>件</span>
-                                                                </span>
-                                                            </div>
+                                                        </div>
+                                                        <div class="product-button">
+                                                            <button type="button" class="btn"
+                                                                onclick="addtocart({{ $item->id }})">加入購物車</button>
+                                                            <button type="button" class="btn">立即購買</button>
+                                                        </div>
+                                                        <div class="product-storage">
+                                                            <span class="product-remain">目前庫存剩下 :
+                                                                <span
+                                                                    class="product-remaincount">{{ $item->qty }}</span>
+                                                                <span>件</span>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -272,8 +272,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
-                        </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
