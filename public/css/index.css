@@ -153,89 +153,6 @@ html {
   padding: 0 10px;
 }
 
-/* !============================================ */
-/* !RWD tablet */
-@media screen and (max-width: 992px) {
-  .hamburger,
-  .toggle-menu {
-    display: block;
-  }
-
-  .header {
-    justify-content: space-between;
-    padding: 10px 20px;
-  }
-
-  .menu {
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: -550px;
-    background: #ffe1cb;
-    width: 550px;
-    height: 100%;
-    padding: 10px 0;
-  }
-  /* 顯示隱藏logo */
-  .menu .logo-hidden a img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  /* 顯示隱藏項目 */
-  .menu li .hidden {
-    display: flex;
-  }
-  /* 顯示隱藏圖示 */
-  .menu .social-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 300px;
-  }
-  .menu .social-icon a {
-    color: #ad7d47c9;
-    font-size: 20px;
-    padding: 5px;
-  }
-
-  /* 新增動態底線 */
-  .menu li {
-    position: relative;
-  }
-
-  .menu li a {
-    color: #ad7d47c9;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    padding: 20px;
-    font-size: 24px;
-    position: relative;
-  }
-
-  .menu li a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    display: block;
-    background: none repeat scroll 0 0 transparent;
-    height: 2px;
-    width: 0;
-    background: #ad7d47c9;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  }
-
-  .menu li a:hover::after {
-    width: 100%;
-    left: 0;
-  }
-}
-/* navbar結束 */
-
 /* parallax */
 #parallax .banner {
   position: relative;
@@ -367,7 +284,7 @@ p {
   flex-direction: column-reverse; */
 }
 /* 系列主題 */
-#theme{
+#theme {
   overflow: hidden;
 }
 
@@ -574,32 +491,6 @@ a {
   font-size: 20px;
 }
 
-/* sidebar */
-/* .sidebar {
-  position: absolute !important;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  height: 100%;
-  /* overflow: auto; */
-} */
-
-/* .sidebar a {
-  display: block;
-  color: #8c8c8b;
-  padding: 16px;
-  text-decoration: none;
-} */
-
-/* .sidebar a.hover {
-  color: #c99833;
-} */
-
-/* .sidebar a:hover:not(.active) {
-  color: #c99833;
-} */
-
 /* 飾品Q&A */
 #QNA a {
   color: #c99833;
@@ -765,4 +656,117 @@ span {
   font-size: 47px;
   color: #c99833;
   padding-left: 51px;
+}
+
+/* !============================================ */
+/* !RWD tablet */
+@media screen and (max-width: 1620px) {
+  .hamburger,
+  .toggle-menu {
+    display: block;
+  }
+
+  .header {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -550px;
+    background: #ffe1cb;
+    width: 550px;
+    height: 100%;
+    padding: 10px 0;
+  }
+  /* 顯示隱藏logo */
+  .menu .logo-hidden a img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  /* 顯示隱藏項目 */
+  .menu li .hidden {
+    display: flex;
+  }
+  /* 顯示隱藏圖示 */
+  .menu .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+  }
+  .menu .social-icon a {
+    color: #ad7d47c9;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  /* 新增動態底線 */
+  .menu li {
+    position: relative;
+  }
+
+  .menu li a {
+    color: #ad7d47c9;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 20px;
+    font-size: 24px;
+    position: relative;
+  }
+
+  .menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    width: 0;
+    background: #ad7d47c9;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  }
+
+  .menu li a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  /* navbar結束 */
+
+  .container-fluid > h1 {
+    padding-bottom: 90px;
+    margin: 0;
+  }
+
+  .container-1 {
+    padding: 0 50px;
+  }
+
+  .container-2 {
+    padding: 0 0px;
+  }
+
+  .container-3 {
+    padding: 0 144.5px;
+  }
+
+  .container-4 {
+    padding: 0 0px;
+  }
+
+  /* 商品專區 */
+  .card-deck{
+    justify-content: center;
+  }
+  /* 品牌故事 */
+  #brand-store .store-text{
+    transform: translateX(-24%);
+  }
 }

@@ -312,33 +312,6 @@
             </div>
         </div>
     </section>
-    {{-- sidebar --}}
-    {{-- <div id="sidebar">
-        <a href="#home">折扣專區</a>
-        <a href="#news">最新商品</a>
-        <a href="#contact">精選商品</a>
-        <a href="#about">客製商品</a>
-    </div> --}}
-
-    <div id="sidebar" class="" style="">
-        <div class="sidebar__inner" style="position: relative;">
-            <p>This is sticky column</p>
-            <div class="resize-sensor"
-                style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
-                <div class="resize-sensor-expand"
-                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
-                    <div
-                        style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 100000px; height: 100000px;">
-                    </div>
-                </div>
-                <div class="resize-sensor-shrink"
-                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
-                    <div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- 品牌門市 -->
     <section id="brand-store">
         <div class="container-3">
