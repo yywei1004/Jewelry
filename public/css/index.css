@@ -367,6 +367,10 @@ p {
   flex-direction: column-reverse; */
 }
 /* 系列主題 */
+#theme{
+  overflow: hidden;
+}
+
 #product-swiper .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
