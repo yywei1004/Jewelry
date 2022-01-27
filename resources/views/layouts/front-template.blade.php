@@ -35,12 +35,12 @@
                         <img src="./img/LOGO.svg" alt="" />
                     </a>
                 </div>
-                <li><a href="#news">最新消息</a></li>
-                <li><a href="#theme">系列主題</a></li>
-                <li><a href="#merch">商品專區</a></li>
-                <li><a class="hidden" href="">關於我們</a></li>
-                <li><a class="hidden" href="">飾品Q&A</a></li>
-                <li><a class="hidden" href="">聯絡我們</a></li>
+                <li><a href="#news-Anchor">最新消息</a></li>
+                <li><a href="#theme-Anchor">系列主題</a></li>
+                <li><a href="#merch-Anchor">商品專區</a></li>
+                <li><a class="hidden" href="#brand-store-Anchor">關於我們</a></li>
+                <li><a class="hidden" href="#QNA-Anchor">飾品Q&A</a></li>
+                <li><a class="hidden" href="#contact-Anchor">聯絡我們</a></li>
                 <div class="social-icon">
                     <a href=""><i class="fas fa-phone-alt"></i></a>
                     <a href=""><i class="fab fa-instagram"></i></a>
@@ -56,9 +56,9 @@
         </div>
         <div class="navigation">
             <ul class="menu">
-                <li><a href="#brand-store">關於我們</a></li>
-                <li><a href="#QNA">飾品Q&A</a></li>
-                <li><a href="#contact">聯絡我們</a></li>
+                <li><a href="#brand-store-Anchor">關於我們</a></li>
+                <li><a href="#QNA-Anchor">飾品Q&A</a></li>
+                <li><a href="#contact-Anchor">聯絡我們</a></li>
             </ul>
         </div>
         <div class="icon">
