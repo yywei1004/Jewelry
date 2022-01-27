@@ -43,7 +43,7 @@ html {
   padding-inline-start: 0;
 }
 /* 隱藏logo */
-.menu .logo-hidden a img{
+.menu .logo-hidden a img {
   width: 165px;
   display: none;
   padding: 20px 0;
@@ -61,7 +61,7 @@ html {
   line-height: 1;
   transition: 0.3s;
   letter-spacing: 3px;
-  line-height:32.69px;
+  line-height: 32.69px;
 }
 .menu li .hidden {
   display: none;
@@ -153,7 +153,8 @@ html {
   padding: 0 10px;
 }
 
-/* RWD tablet */
+/* !============================================ */
+/* !RWD tablet */
 @media screen and (max-width: 992px) {
   .hamburger,
   .toggle-menu {
@@ -177,13 +178,13 @@ html {
     height: 100%;
     padding: 10px 0;
   }
- /* 顯示隱藏logo */
- .menu .logo-hidden a img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
+  /* 顯示隱藏logo */
+  .menu .logo-hidden a img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
   /* 顯示隱藏項目 */
   .menu li .hidden {
     display: flex;
@@ -192,7 +193,7 @@ html {
   .menu .social-icon {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     margin-top: 300px;
   }
   .menu .social-icon a {
@@ -242,7 +243,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   width: 100%;
   height: 100vh;
 }
@@ -263,31 +264,34 @@ main {
   /* background-attachment: fixed; */
 }
 
-#news , #theme , #merch, #brand-store ,#QNA {
+#news,
+#theme,
+#merch,
+#brand-store,
+#QNA {
   margin-top: 240px;
 }
 
-.container-fluid > h1{
+.container-fluid > h1 {
   padding-bottom: 100px;
   margin: 0;
 }
 
-.container-1{
+.container-1 {
   padding: 0 315px;
 }
 
-.container-2{
+.container-2 {
   padding: 0 210px;
 }
 
-.container-3{
+.container-3 {
   padding: 0 380px;
 }
 
-.container-4{
+.container-4 {
   padding: 0 148px;
 }
-
 
 h1 {
   font-size: 48px;
@@ -325,15 +329,14 @@ p {
   position: absolute;
   top: -90%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 /* 大標 */
-.news-title{
+.news-title {
   margin: 0;
   letter-spacing: 1px;
   color: #c99733d0;
-  
 }
 
 #news .col .news-update {
@@ -370,11 +373,11 @@ p {
   background-color: #5c5c5c;
 }
 
-.swiper-pagination{
-  bottom:-73px !important;
+.swiper-pagination {
+  bottom: -73px !important;
 }
 
-.swiper{
+.swiper {
   overflow: visible;
 }
 
@@ -418,9 +421,8 @@ a {
 }
 
 /* swiper圖片 */
-.swiper-slide{
+.swiper-slide {
   width: 360px !important;
-
 }
 
 /* 卡片上下顛倒 */
@@ -429,7 +431,7 @@ a {
 }
 
 /* 商品專區 */
-#merch  h2 {
+#merch h2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -438,7 +440,6 @@ a {
   z-index: 1;
   margin-bottom: 18px !important;
   margin-top: 50px !important;
-
 }
 
 /* 偽元素裝飾線 */
@@ -467,10 +468,9 @@ a {
   background-color: #fff9f9;
 }
 
-#merch .col-4{
+#merch .col-4 {
   padding: 0;
 }
-
 
 #merch p {
   color: #ad7d47;
@@ -494,7 +494,7 @@ a {
   position: relative;
 }
 
-#merch .card-deck .row .card::before{
+#merch .card-deck .row .card::before {
   position: absolute;
   z-index: 1;
   top: 5%;
@@ -506,31 +506,31 @@ a {
   align-items: center;
 }
 
-#merch .discount .card-deck .row .col-4:nth-child(1) .card::before{
-  content: '網路獨賣';
+#merch .discount .card-deck .row .col-4:nth-child(1) .card::before {
+  content: "網路獨賣";
   font-size: 20px;
   padding: 5px 20px;
   letter-spacing: 1.2px;
   font-weight: lighter;
 }
 
-#merch .selection .card-deck .row .col-4:nth-child(1) .card::before{
-  content: '網路獨賣';
+#merch .selection .card-deck .row .col-4:nth-child(1) .card::before {
+  content: "網路獨賣";
   font-size: 20px;
   padding: 5px 20px;
   letter-spacing: 1.2px;
   font-weight: lighter;
 }
 
-#merch .discount .card-deck .row .col-4:nth-child(3) .card::before{
-  content: '專櫃獨賣';
+#merch .discount .card-deck .row .col-4:nth-child(3) .card::before {
+  content: "專櫃獨賣";
   font-size: 20px;
   padding: 5px 20px;
   letter-spacing: 1.2px;
   font-weight: lighter;
 }
-#merch .selection .card-deck .row .col-4:nth-child(5) .card::before{
-  content: '專櫃獨賣';
+#merch .selection .card-deck .row .col-4:nth-child(5) .card::before {
+  content: "專櫃獨賣";
   font-size: 20px;
   padding: 5px 20px;
   letter-spacing: 1.2x;
@@ -569,6 +569,33 @@ a {
 #merch .custom p {
   font-size: 20px;
 }
+
+/* sidebar */
+/* .sidebar {
+  position: absolute !important;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  height: 100%;
+  /* overflow: auto; */
+} */
+
+/* .sidebar a {
+  display: block;
+  color: #8c8c8b;
+  padding: 16px;
+  text-decoration: none;
+} */
+
+/* .sidebar a.hover {
+  color: #c99833;
+} */
+
+/* .sidebar a:hover:not(.active) {
+  color: #c99833;
+} */
+
 /* 飾品Q&A */
 #QNA a {
   color: #c99833;
@@ -576,12 +603,12 @@ a {
   margin-left: 32px;
 }
 
-#QNA .row .col-6 .card img:hover{
+#QNA .row .col-6 .card img:hover {
   background-image: url("../img/飾品Q_A/Q_A-3.jpg");
   background-size: cover;
 }
 
-#QNA .card-2{
+#QNA .card-2 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -592,12 +619,12 @@ a {
   background-color: #fff1e9ab;
 }
 
-#QNA h3{
-  color: #AD7D47;
+#QNA h3 {
+  color: #ad7d47;
   margin-bottom: 28px;
 }
 
-#QNA .card-2 > span{
+#QNA .card-2 > span {
   width: 173px;
   font-size: 20px;
   color: #00000055;
@@ -625,7 +652,7 @@ footer .form-title {
 }
 
 .form-control {
-  background-color:#ffffff7e;
+  background-color: #ffffff7e;
   border: 0;
 }
 
@@ -634,7 +661,7 @@ footer form {
   position: relative;
 }
 
-.fa-envelope-open-text{
+.fa-envelope-open-text {
   font-size: 28px;
   padding-right: 14px;
 }
@@ -722,9 +749,16 @@ span {
 }
 #brand-store .store-h1 {
   margin: 0 0 30px 35px;
-  color: #AD7D47;
+  color: #ad7d47;
   font-size: 48px;
 }
 #brand-store li {
   margin-bottom: 20px;
+}
+
+#contact a {
+  margin: 74px 0;
+  font-size: 47px;
+  color: #c99833;
+  padding-left: 51px;
 }
