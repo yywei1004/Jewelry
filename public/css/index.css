@@ -161,7 +161,7 @@ html {
   background-size: cover;
 
   width: 100%;
-  height: 100vh;
+  height: 65vw;
 }
 #parallax .caption {
   position: absolute;

@@ -22,7 +22,7 @@
     </div>
     <!-- parallax區塊 -->
     <section id="parallax">
-        <div class="banner" style="background-image: url({{ @$cover[0]->cover_path }});">
+        <div class="banner" style="background-image: url({{ @$cover[0]->cover_path }}); background-size: 100%; background-position-y: 145px;">
             {{-- <div class="caption">
                 <h2>獨/特</h2>
                 <h2>因妳而在此誕生</h2>
