@@ -12,6 +12,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN composer install --no-dev --optimize-autoloader
+RUN composer update --ignore-platform-reqs
 
 CMD php artisan serve --host=0.0.0.0 --port=$PORT
