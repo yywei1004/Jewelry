@@ -1,4 +1,4 @@
-FROM php:8.1-cli
+FROM php:7.4-cli
 
 RUN apt-get update && apt-get install -y \
     unzip \
@@ -12,6 +12,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN composer update --ignore-platform-reqs
+RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
 
-CMD php artisan serve --host=0.0.0.0 --port=$PORT
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
