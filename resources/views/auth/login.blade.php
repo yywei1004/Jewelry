@@ -35,7 +35,7 @@
                     </a>
                 </div>
                 <!-- * 登入form -->
-                <form action="{{ route('login') }}" method="POST" class="col-8 form-input d-flex flex-column justify-content-between">
+                <form action="{{ route('login', [], false) }}" method="POST" class="col-8 form-input d-flex flex-column justify-content-between">
                     @csrf
                     <div class="form-input-number d-flex flex-column ">
                         <div class="email-address d-flex align-items-center">
@@ -73,7 +73,7 @@
 
                     <div class="d-flex justify-content-between align-items-center password-forget" >
                         @if (Route::has('password.request'))
-                                    <a class="btn btn-link h4" href="{{ route('password.request') }}" style="color: #AD7D47;">
+                                    <a class="btn btn-link h4" href="{{ route('password.request', [], false) }}" style="color: #AD7D47;">
                                         {{ __('忘記密碼?') }}
                                     </a>
                                 @endif
