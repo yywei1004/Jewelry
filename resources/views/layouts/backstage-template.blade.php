@@ -16,7 +16,7 @@
     <!-- DataTable Core CSS CDN -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <!-- layout CSS -->
-    <link rel="stylesheet" href="{{ asset('css/backstage-template.css') }}">
+    <link rel="stylesheet" href="/css/backstage-template.css">
     @yield('css')
 </head>
 
@@ -25,7 +25,7 @@
         <div class="list d-flex justify-content-center align-items-end">
             <a href="/order" id="order">訂單管理</a>
             <a href="/user" id="user">會員管理</a>
-            <img src="{{ asset('img/LOGO.webp') }}" alt="">
+            <img src="/img/LOGO.webp" alt="">
             <a href="/news" id="news">頁面管理</a>
             <a href="/feedback" id="feedback">意見回饋</a>
         </div>
