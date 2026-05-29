@@ -32,10 +32,10 @@
         <div class="user">
             <h3>歡迎回來! {{ Auth::user()->name}}</h3>
             <a style="text-decoration: none; color: #AD7D47C9"
-                href="{{ route('logout') }}" onclick="event.preventDefault();
+                href="{{ route('logout', [], false) }}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                 <i class="fas fa-user-circle"></i>登出</a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            <form id="logout-form" action="{{ route('logout', [], false) }}" method="POST" class="d-none">
                 @csrf
             </form>
         </div>

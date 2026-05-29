@@ -8,10 +8,10 @@
     <main class="containers py-5">
         <div class="container-title d-flex justify-content-between mx-auto" style="margin-top: 114px">
             <div class="container-title-left">歡迎回來!</div>
-            <a class="container-title-right" href="{{ route('logout') }}" title="登出"
+            <a class="container-title-right" href="{{ route('logout', [], false) }}" title="登出"
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">登出</a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            <form id="logout-form" action="{{ route('logout', [], false) }}" method="POST" class="d-none">
                 @csrf
             </form>
         </div>
