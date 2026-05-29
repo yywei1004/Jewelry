@@ -431,7 +431,7 @@
                 formdata.append('_token', ' {{ csrf_token() }}')
                 formdata.append('product_id', product_id)
                 formdata.append('num', num)
-            
+
                 fetch('/addtocart', {
                 method: 'POST',
                 body: formdata
@@ -456,12 +456,21 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             function initSticky() {
+                var sidebarElement = document.querySelector('#sidebar');
+                if (!sidebarElement) {
+                    return;
+                }
+
                 if (typeof StickySidebar !== 'undefined') {
                     new StickySidebar('#sidebar', { topSpacing: 20 });
                 } else {
                     var s = document.createElement('script');
                     s.src = 'https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js';
-                    s.onload = function () { new StickySidebar('#sidebar', { topSpacing: 20 }); };
+                    s.onload = function () {
+                        if (document.querySelector('#sidebar')) {
+                            new StickySidebar('#sidebar', { topSpacing: 20 });
+                        }
+                    };
                     document.head.appendChild(s);
                 }
             }
