@@ -454,8 +454,19 @@
         @endif
     </script>
     <script>
-        var sidebar = new StickySidebar('#sidebar', {
-            topSpacing: 20
+        document.addEventListener('DOMContentLoaded', function () {
+            function initSticky() {
+                if (typeof StickySidebar !== 'undefined') {
+                    new StickySidebar('#sidebar', { topSpacing: 20 });
+                } else {
+                    var s = document.createElement('script');
+                    s.src = 'https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js';
+                    s.onload = function () { new StickySidebar('#sidebar', { topSpacing: 20 }); };
+                    document.head.appendChild(s);
+                }
+            }
+
+            initSticky();
         });
     </script>
 @endsection
