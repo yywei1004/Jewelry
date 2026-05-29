@@ -94,7 +94,14 @@
                 method: 'POST',
                 body: formdata
             })
-            element.parentElement.remove()
+            if (element && element.parentElement) {
+                element.parentElement.remove();
+            } else {
+                document.querySelectorAll('#uploaded-img .img-card').forEach(function(card){
+                    var inp = card.querySelector('input[name="img[]"]');
+                    if (inp && inp.value === path) card.remove();
+                });
+            }
         }
     </script>
 @endsection
