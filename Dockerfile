@@ -12,7 +12,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
+RUN composer install --no-dev --optimize-autoloader
 
 EXPOSE 8080
 
