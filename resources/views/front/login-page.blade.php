@@ -2,7 +2,7 @@
 @section('title', 'ISHA 會員')
 @section('css')
     <!-- checkout1 css -->
-    <link rel="stylesheet" href="{{ asset('css/login-page.css') }}">
+    <link rel="stylesheet" href="/css/login-page.css">
 @endsection
 @section('main')
     <main class="containers py-5">
@@ -13,7 +13,7 @@
             document.getElementById('logout-form').submit();">登出</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
-            </form>    
+            </form>
         </div>
         <div class="form-table mx-auto">
             <div class="form-title d-flex justify-content-between">

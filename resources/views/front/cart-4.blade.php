@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('css/cart-4.css')}}" />
+    <link rel="stylesheet" href="/css/cart-4.css" />
     <title>index</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
 </head>
@@ -154,7 +154,7 @@
                 <h2 class="w-100 text-center mt-3">訂單成立</h2>
                 <div class="items d-flex flex-wrap">
                     <h3>訂單明細</h3>
-                    
+
                     @foreach ($order->order_detail as $item)
                     <div class="item d-flex w-100 border-bottom mt-3 pb-3">
                         <img class="me-3 rounded-circle" src="{{$item->product->imgs[0]->image_path}}" />
@@ -168,7 +168,7 @@
                         </div>
                     </div>
                     @endforeach
-                    
+
 
                 </div>
             </section>
@@ -227,12 +227,12 @@
                 <a href="/trade/{{$order->id}}">
                     <button type="button" class="btn btn-primary mt-5">金流結帳</button>
                 </a>
-                
+
             </section>
         </div>
     </section>
     <footer>
-     
+
         <div class="full d-flex bg-light">
             <div class="container">
                 <div class="

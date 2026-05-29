@@ -3,7 +3,7 @@
 @section('css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- checkout1 css -->
-    <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
+    <link rel="stylesheet" href="/css/checkout.css">
 @endsection
 @section('main')
     <main class="containers">
@@ -153,7 +153,7 @@
 @endsection
 @section('js')
     <!-- 數量 js -->
-    <script src="{{ asset('js/checkout.js') }}"></script>
+    <script src="/js/checkout.js"></script>
     <script>
         function changefee(value) {
             let subtotalElement = document.querySelector('.subtotal')

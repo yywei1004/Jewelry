@@ -2,7 +2,7 @@
 @section('title', 'ISHA 購物車')
 @section('css')
     <!-- checkout1 css -->
-    <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
+    <link rel="stylesheet" href="/css/checkout.css">
 @endsection
 @section('main')
     <main class="containers">

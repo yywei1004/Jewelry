@@ -1,7 +1,7 @@
 @extends('layouts.backstage-template')
 @section('title', '商品專區')
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+    <link rel="stylesheet" href="/css/product.css">
     <style>
         .container .tab-list .promotion-tab {
             background-color: #f0f0f0;

@@ -4,14 +4,14 @@
     <!-- index-modal CSS -->
     <link rel="stylesheet" href="./css/index-modal.css">
     <!-- loading CSS -->
-    <link rel="stylesheet" href="{{ asset('css/loading.css') }}">
+    <link rel="stylesheet" href="/css/loading.css">
 @endsection
 @section('main')
     <div class="prev">
         <div class="containers">
             <div class="loading d-flex">
                 <div class="logo">
-                    <img src="{{ asset('img/LOGO.svg') }}" alt="">
+                    <img src="/img/LOGO.svg" alt="">
                 </div>
                 <div class="line my-3"></div>
                 <div class="text">獨特 · 因妳而在此誕生

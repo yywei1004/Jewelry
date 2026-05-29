@@ -1,12 +1,12 @@
 @extends('layouts.backstage-template')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/user-look.css')}}">
+<link rel="stylesheet" href="/css/user-look.css">
 @endsection
   @section('main')
   <div class="container">
     <form action="/user/userupdate/{{$user->id}}" method="post">
-       
+
         <div>姓名</div>
         <div>{{$user->name}}</div>
         <div>信箱</div>
@@ -25,4 +25,3 @@
     </form>
 </div>
   @endsection
- 
