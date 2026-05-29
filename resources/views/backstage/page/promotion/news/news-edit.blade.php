@@ -1,7 +1,7 @@
 @extends('layouts.backstage-template')
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('css/blog-create.css')}}">
+    <link rel="stylesheet" href="/css/blog-create.css">
 
 @endsection
 
@@ -25,5 +25,4 @@
         </form>
     </div>
 @endsection
-    
-	
+

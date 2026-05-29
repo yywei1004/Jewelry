@@ -20,18 +20,18 @@
 <body>
     <div class="containers">
         <a class="logo" href="/index">
-            <img src="{{asset('img/LOGO.svg')}}" alt="">
+            <img src="/img/LOGO.svg" alt="">
         </a>
         <div class="form-block">
             <div class="form-inside-block row ">
                 <div class="form-choose col-4 d-flex flex-column justify-content-between">
                     <a class="signin" href="/login" style="color: rgba(173, 125, 71, 0.4);">
                         <span>SignIn</span>
-                        <span>登入</span>        
+                        <span>登入</span>
                     </a>
                     <a class="signup" href="/register" style="color: #ad7d47;">
                         <span>SignUp</span>
-                        <span>註冊</span>    
+                        <span>註冊</span>
                     </a>
                 </div>
                 <!-- * 登入form -->
@@ -41,7 +41,7 @@
                         <div class="name d-flex align-items-center">
                             <label for="name" class="fas fa-user-circle" style="color: #ad7d47; ">
                             </label>
-                            <input id="name" name="name" type="text" style="border: 0; 
+                            <input id="name" name="name" type="text" style="border: 0;
                             outline: none; " placeholder="name" class="form-control @error('name') is-invalid @enderror"
                             value="{{ old('name') }}" required autocomplete="name" autofocus>
                             @error('name')
@@ -53,7 +53,7 @@
                         <div class="email-address d-flex">
                             <label for="email" class="far fa-envelope" style="color: #ad7d47; ">
                             </label>
-                            <input id="email" name="email" type="email" style="border: 0; 
+                            <input id="email" name="email" type="email" style="border: 0;
                             outline: none; " placeholder="e-mail address" class="form-control @error('email') is-invalid @enderror"
                             value="{{ old('email') }}" required autocomplete="email">
                             @error('email')
@@ -64,7 +64,7 @@
                         </div>
                         <div class="password d-flex ">
                             <label for="password" class="fas fa-lock" style="color: #AD7D47;"></label>
-                            <input id="password" name="password" type="password" style="border: 0;  
+                            <input id="password" name="password" type="password" style="border: 0;
                             outline: none; " placeholder="password" class="form-control @error('password') is-invalid @enderror"
                             required autocomplete="new-password">
                             @error('password')
@@ -75,14 +75,14 @@
                         </div>
                         <div class="password d-flex ">
                             <label for="password-confirm" class="far fa-lock" style="color: #AD7D47;"></label>
-                            <input id="password-confirm" name="password_confirmation" type="password" style="border: 0;  
+                            <input id="password-confirm" name="password_confirmation" type="password" style="border: 0;
                             outline: none; " placeholder="password-confirm" class="form-control"
                             required autocomplete="new-password">
-                            
+
                         </div>
                         <div class="birthday d-flex ">
                             <label for="birthday" class="fas fa-birthday-cake" style="color: #AD7D47;"></label>
-                            <input id="birthday" name="birthday" type="date" class="birthday-input" style="border: 0;  
+                            <input id="birthday" name="birthday" type="date" class="birthday-input" style="border: 0;
                             outline: none;" class="form-control @error('birthday') is-invalid @enderror"
                             value="{{ old('birthday') }}" required autocomplete="birthday">
                             @error('birthday')

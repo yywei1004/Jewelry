@@ -1,7 +1,7 @@
 @extends('layouts.backstage-template')
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('css/blog-create.css')}}">
+    <link rel="stylesheet" href="/css/blog-create.css">
 
 @endsection
 
@@ -18,7 +18,7 @@
                 <label for="text">文章內文</label>
                 <textarea id="text" name="text"></textarea>
             </div>
- 
+
             <div class="row btn">
                 <a href="/blog">取消</a>
                 <button type="submit">新增文章</button>
@@ -26,5 +26,4 @@
         </form>
     </div>
 @endsection
-    
-	
+

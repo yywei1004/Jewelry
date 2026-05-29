@@ -15,7 +15,7 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- layout CSS -->
-	<link rel="stylesheet" href="{{asset('css/layout.css')}}">
+	<link rel="stylesheet" href="/css/layout.css">
 
     @yield('css')
 </head>
@@ -24,13 +24,13 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container">
 			<a class="navbar-brand" href="./index.html">
-				<img src="{{asset('img/vtb-23846-18ohsosoftteddybear-lightbrown_feature4_20201012_0843.jpg')}}" width="30" height="30" alt="">
+				<img src="/img/vtb-23846-18ohsosoftteddybear-lightbrown_feature4_20201012_0843.jpg')}}" width="30" height="30" alt="">
                 @if (Auth::check())
                     {{ Auth::user()->name}}，您好, 歡迎登入
                 @else
                     這邊是後台，你是怎麼進來的???
                 @endif
-                
+
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,7 +78,7 @@
 
 	<main>
         @yield('main')
-        
+
 	</main>
 
 	<footer>

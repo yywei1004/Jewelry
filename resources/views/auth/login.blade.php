@@ -20,18 +20,18 @@
 <body>
     <div class="containers">
         <a class="logo" href="/index">
-            <img src="{{asset('img/LOGO.svg')}}" alt="">
+            <img src="/img/LOGO.svg" alt="">
         </a>
         <div class="form-block">
             <div class="form-inside-block row ">
                 <div class="form-choose col-4 d-flex flex-column justify-content-between">
                     <a class="signin" href="/login" style="color: #ad7d47;">
                         <span>SignIn</span>
-                        <span>登入</span>        
+                        <span>登入</span>
                     </a>
                     <a class="signup" href="/register" style="color: rgba(173, 125, 71, 0.4);">
                         <span>SignUp</span>
-                        <span>註冊</span>    
+                        <span>註冊</span>
                     </a>
                 </div>
                 <!-- * 登入form -->
@@ -41,7 +41,7 @@
                         <div class="email-address d-flex align-items-center">
                             <label for="email" class="far fa-envelope" style="color: #ad7d47; ">
                             </label>
-                            <input id="email" name="email" type="email" style="border: 0; 
+                            <input id="email" name="email" type="email" style="border: 0;
                             outline: none; " placeholder="e-mail address" class="form-control @error('email') is-invalid @enderror"
                             value="{{ old('email') }}" required autocomplete="email" autofocus>
                             @error('email')
@@ -52,7 +52,7 @@
                         </div>
                         <div class="password d-flex align-items-center">
                             <label for="password" class="fas fa-lock" style="color: #AD7D47;"></label>
-                            <input id="password" name="password" type="password" style="border: 0;  
+                            <input id="password" name="password" type="password" style="border: 0;
                             outline: none; " placeholder="password"class="form-control @error('password') is-invalid @enderror"
                             required autocomplete="current-password">
                             @error('password')

@@ -1,8 +1,8 @@
 @extends('layouts.backstage-template')
 
 @section('css')
-<link rel="stylesheet" href="{{asset('css/goods-create.css')}}">
-    
+<link rel="stylesheet" href="/css/goods-create.css">
+
 @endsection
 @section('main')
 <div class="container">
@@ -28,8 +28,8 @@
                 <input type="text" value="{{$img->image_path}}" hidden>
             </div>
             @endforeach
-           
-            
+
+
         </div>
         <div class="row">
             <label for="price">商品原價</label>
@@ -43,8 +43,8 @@
             <label for="qty">庫存數量</label>
             <input type="number" id="qty" name="qty" value="{{$product->qty}}">
         </div>
-        
-       
+
+
         <div class="row btn">
             <a href="/news">取消</a>
             <button type="submit">編輯商品</button>
@@ -59,7 +59,7 @@
         var input = document.querySelector('#images');
         var uploaded = document.querySelector('#uploaded-img');
 
-        
+
         function imgupload(){
             var formdata = new FormData()
             formdata.append('_token', ' {{csrf_token()}}')
@@ -101,8 +101,7 @@
                 })
                 element.parentElement.remove()
             }
-            
+
         }
     </script>
 @endsection
-   

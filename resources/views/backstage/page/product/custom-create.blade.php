@@ -1,8 +1,8 @@
 @extends('layouts.backstage-template')
 
 @section('css')
-<link rel="stylesheet" href="{{asset('css/goods-create.css')}}">
-    
+<link rel="stylesheet" href="/css/goods-create.css">
+
 @endsection
 @section('main')
 <div class="container">
@@ -26,7 +26,7 @@
                 <img src="/upload/goods/164136056037a749d808e46495a8da1e5352d03cae.jpg" alt="">
                 <input type="text" name="img[]" value="${/upload/goods/164136056037a749d808e46495a8da1e5352d03cae.jpg}" hidden>
             </div> --}}
-            
+
         </div>
         <div class="row">
             <label for="original_price">商品原價</label>
@@ -40,8 +40,8 @@
             <label for="qty">庫存數量</label>
             <input type="number" id="qty" name="qty">
         </div>
-        
-       
+
+
         <div class="row btn">
             <a href="/product">取消</a>
             <button type="submit">新增商品</button>
@@ -56,7 +56,7 @@
         var input = document.querySelector('#images');
         var uploaded = document.querySelector('#uploaded-img');
 
-        
+
         function imgupload(){
             var formdata = new FormData()
             formdata.append('_token', ' {{csrf_token()}}')
@@ -98,4 +98,3 @@
         }
     </script>
 @endsection
-   
